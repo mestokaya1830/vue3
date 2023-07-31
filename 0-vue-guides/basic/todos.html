@@ -33,7 +33,7 @@
       min-height: 30px;
       padding-left: 10px;
     }
-    input[type="button"]{
+    input[type="submit"]{
       width: 15%;
       max-height: 30px;
       margin-left: 5px;
@@ -77,10 +77,10 @@
 <body class="h-full grid place-items-center">
   <div id="app">
     <h2 class="title">Todos</h2>
-    <div class="container" v-if="todos.filter(item => !item.completed).length">
+    <form @submit.prevent="addTodo()" class="container" v-if="todos.filter(item => !item.completed).length">
       <div class="input">
-        <input type="text" name="" id="">
-        <input type="button" value="Add">
+        <input type="text" v-model="newTodo">
+        <input type="submit" value="Add">
       </div>
       <ul>
         <li class="head">
@@ -94,7 +94,7 @@
           <span class="completed"><input type="checkbox" v-model="item.completed"></span>
         </li>
       </ul>
-    </div>
+    </form>
     <div class="container" v-if="todos.filter(item => item.completed).length">
       <h3>Completed</h3>
       <ul>
@@ -125,11 +125,19 @@
             {id: 4, name: 'Watch TV', completed: false},
             {id: 5, name: 'Brush theet', completed: false},
             {id: 6, name: 'Go to bed', completed: false}
-          ]
+          ],
+          newTodo: ''
         }
       },
       methods: {
-        
+        addTodo(){
+          this.todos.push({
+            id: this.todos.length + 1,
+            name: this.newTodo,
+            completed: false
+          })
+          this.newTodo = ''
+        }
       },
    })
    .mount('#app')

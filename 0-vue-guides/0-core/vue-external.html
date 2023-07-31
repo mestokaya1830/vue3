@@ -23,19 +23,9 @@
     <h2 class="title">{{ title }}</h2>
   </div>
 
-  <script>
-   Vue.createApp({
-      data() {
-        return {
-          title: 'Use Vue Local or With Cdn'
-        }
-      },
-      methods: {
-        
-      },
-   })
-   .mount('#app')
-   //open terminal and npx serve
+  <script type="module">
+   import App from './config.js'
+   Vue.createApp(App).mount('#app')
   </script>
 </body>
 </html>
