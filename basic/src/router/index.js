@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import Binding from "../views/Binding.vue";
 import Flow from "../views/Flow.vue";
 import Loop from "../views/Loop.vue";
+import LoopIf from "../views/LoopIf.vue";
 import LoopFilter from "../views/LoopFilter.vue";
 import Methods from "../views/Methods.vue";
 import Events from "../views/Events.vue";
@@ -37,6 +38,11 @@ const routes = [
     path: "/flow",
     name: "Flow",
     component: Flow,
+  },
+  {
+    path: "/loopif",
+    name: "LoopIf",
+    component: LoopIf,
   },
   {
     path: "/loop",

@@ -5,6 +5,7 @@
       <li><router-link class="links" to="/binding">Binding</router-link></li>
       <li><router-link class="links" to="/flow">Flow</router-link></li>
       <li><router-link class="links" to="/loop">Loop</router-link></li>
+      <li><router-link class="links" to="/loopif">Loop If</router-link></li>
       <li><router-link class="links" to="/loopfilter">Loop Filter</router-link></li>
       <li><router-link class="links" to="/methods">Methods</router-link></li>
       <li><router-link class="links" to="/events">Events</router-link></li>

@@ -7,12 +7,16 @@
 
     <!-- binding html -->
     <p v-html="myHtml"></p>
-
+    
     <!-- binding class -->
     <p :class="{ panel: isAdmin }">Binding Class With If</p>
     <p class="{{ panel }}">Binding Class</p>
     <p :class="['new', 'font']">Binding Multi Classes</p>
     <p :class="role=='Admin' ? 'admin-class' : 'user-class'">Binding Class With Ternary</p>
+    
+    <!-- binding id -->
+    <p :id="id">Binding ID</p>
+
   </div>
 </template>
 
@@ -26,6 +30,7 @@ export default {
       myHtml: "<h4>This is a BindingHtml</h4>",
       isAdmin: true,
       role: 'User',
+      id:'p1'
     };
   },
 };
