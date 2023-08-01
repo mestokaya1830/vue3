@@ -5,11 +5,11 @@
       <li><router-link class="links" to="/binding">Binding</router-link></li>
       <li><router-link class="links" to="/flow">Flow</router-link></li>
       <li><router-link class="links" to="/loop">Loop</router-link></li>
+      <li><router-link class="links" to="/loopfilter">Loop Filter</router-link></li>
       <li><router-link class="links" to="/methods">Methods</router-link></li>
       <li><router-link class="links" to="/events">Events</router-link></li>
       <li><router-link class="links" to="/form">Form</router-link></li>
       <li><router-link class="links" to="/modifiers">Modifiers</router-link></li>
-      <li><router-link class="links" to="/directive">Directive</router-link></li>
       <li><router-link class="links" to="/computed">Computed</router-link></li>
       <li><router-link class="links" to="/watcher">Watcher</router-link></li>
       <li><router-link class="links" to="/component">Component</router-link></li>
@@ -22,7 +22,7 @@
       <li><router-link class="links" to="/refs">Refs</router-link></li>
       <li><router-link class="links" to="/mixins">Mixins</router-link></li>
       <li><router-link class="links" to="/vuex">Vuex</router-link></li>
-      <li><router-link class="links" to="/setup">Setup</router-link></li>
+      <li><router-link class="links" to="/todos">Todos</router-link></li>
     </ul>
   </div>
 </template>

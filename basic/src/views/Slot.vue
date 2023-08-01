@@ -5,7 +5,7 @@
   <div>
     <h2>{{ title }}</h2>
     <SlotComponent>
-      <h4>Hello I am From Parent Page</h4>
+      <h4>This text is also comes from Slot Component but declared in Parent page where Slot-Component called </h4>
     </SlotComponent>
   </div>
 </template>
@@ -14,7 +14,7 @@
   name:'Slot',
   data (){
     return {
-      title:'Slot Page'
+      title:'Slot Component Page'
     }
   }
 }

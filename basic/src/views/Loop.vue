@@ -8,24 +8,6 @@
         <span>{{ item.price }}</span>
       </li>
     </ul>
-    <!-- filter set key as item key -->
-    <h3>Filter</h3>
-    <ul>
-      <li v-for="item, index in products" :key="index" >
-      <div v-if="item.price === 200">
-        <span>{{ item.name }}</span>
-        <span>{{ item.price }}</span>
-      </div>
-      </li>
-    </ul>
-    <!-- loop as computed -->
-    <h3>Filter Computed</h3>
-    <ul>
-      <li v-for="item, index in expensivePrice" :key="index" >
-        <span>{{ item.name }}</span>
-        <span>{{ item.price }}</span>
-      </li>
-    </ul>
   </div>
 </template>
 
@@ -44,9 +26,7 @@ export default {
     }
   },
   computed:{
-    expensivePrice(){
-      return this.products.filter(item => item.price > 200)
-    }
+   
   }
 };
 </script>

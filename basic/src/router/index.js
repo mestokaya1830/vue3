@@ -3,11 +3,11 @@ import Home from "../views/Home.vue";
 import Binding from "../views/Binding.vue";
 import Flow from "../views/Flow.vue";
 import Loop from "../views/Loop.vue";
+import LoopFilter from "../views/LoopFilter.vue";
 import Methods from "../views/Methods.vue";
 import Events from "../views/Events.vue";
 import Form from "../views/Form.vue";
 import Modifiers from "../views/Modifiers.vue";
-import Directive from "../views/Directive.vue";
 import Computed from "../views/Computed.vue";
 import Watcher from "../views/Watcher.vue";
 import Component from "../views/Component.vue";
@@ -20,7 +20,7 @@ import HttpRequest from "../views/HttpRequest.vue";
 import Refs from "../views/Refs.vue";
 import Mixins from "../views/Mixins.vue";
 import Vuex from "../views/Vuex.vue";
-import Setup from "../views/Setup.vue";
+import Todos from "../views/Todos.vue";
 
 const routes = [
   {
@@ -44,6 +44,11 @@ const routes = [
     component: Loop,
   },
   {
+    path: "/loopfilter",
+    name: "LoopFilter",
+    component: LoopFilter,
+  },
+  {
     path: "/methods",
     name: "Methods",
     component: Methods,
@@ -62,11 +67,6 @@ const routes = [
     path: "/modifiers",
     name: "Modifiers",
     component: Modifiers,
-  },
-  {
-    path: "/directive",
-    name: "Directive",
-    component: Directive,
   },
   {
     path: "/computed",
@@ -129,9 +129,9 @@ const routes = [
     component: Vuex,
   },
   {
-    path: "/setup",
-    name: "Setup",
-    component: Setup,
+    path: "/todos",
+    name: "Todos",
+    component: Todos,
   },
   
 ];

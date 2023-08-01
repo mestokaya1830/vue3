@@ -3,15 +3,16 @@
   <h2>{{ title }}</h2>
   <br>
     <!-- binding text -->
-    <h4 v-text="myText"></h4>
+    <p v-text="myText"></p>
 
     <!-- binding html -->
-    <div v-html="myHtml"></div>
+    <p v-html="myHtml"></p>
 
     <!-- binding class -->
-    <h4 :class="{ panel: isAdmin }">Binding Class With If</h4>
-    <h4 class="{{ panel }}">Binding Class</h4>
-    <h4 :class="['new', 'font']">Binding Multi Classes</h4>
+    <p :class="{ panel: isAdmin }">Binding Class With If</p>
+    <p class="{{ panel }}">Binding Class</p>
+    <p :class="['new', 'font']">Binding Multi Classes</p>
+    <p :class="role=='Admin' ? 'admin-class' : 'user-class'">Binding Class With Ternary</p>
   </div>
 </template>
 
@@ -24,11 +25,15 @@ export default {
       myText: "This is a BindingText",
       myHtml: "<h4>This is a BindingHtml</h4>",
       isAdmin: true,
+      role: 'User',
     };
   },
 };
 </script>
 <style>
+p{
+  margin: 5px 0;
+}
 .panel {
   color: red;
 }
@@ -40,5 +45,11 @@ export default {
 }
 .font {
   font-style: italic;
+}
+.admin-class{
+  color: green;
+}
+.user-class{
+  color: blue;
 }
 </style>

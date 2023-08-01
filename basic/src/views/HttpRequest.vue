@@ -1,9 +1,7 @@
-<script setup>
-import { axios } from "../modules/axios.js";
-</script>
 <template>
   <div>
     <h2>{{ title }}</h2>
+    <p>Get the users from Placeholder Api</p>
     <ul>
       <li v-for="(item, index) in Users" :key="index">
         <span>{{ item.name }}</span>
@@ -14,6 +12,7 @@ import { axios } from "../modules/axios.js";
   </div>
 </template>
 <script>
+import { axios } from "../modules/axios.js";
 export default {
   name: "Http Request",
   data() {

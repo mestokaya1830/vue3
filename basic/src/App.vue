@@ -13,14 +13,17 @@
     name: "App",
     data() {
       return {
-        
+        name:''
       };
     },
-    methods: {
+    mounted(){
       
     },
+    methods: {
+     
+    },
     provide:{
-      message:'This message came via Provide in App page'
+      message:'Inject Provide mean that You can share some data declared in App.vue(Look at the App.vue provide Hook)'
     }
   };
   </script>

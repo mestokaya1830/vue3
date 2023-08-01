@@ -1,6 +1,6 @@
 <template lang="">
   <div>
-    <h3>{{ title }}</h3>
+    <p>{{ title }}</p>
     <slot />
   </div>
 </template>
@@ -9,7 +9,7 @@ export default {
   name:'Slot Component',
   data () {
     return {
-      title:'Slot Component'
+      title:'This side is comes from Slot-Component'
     }
   }
 }

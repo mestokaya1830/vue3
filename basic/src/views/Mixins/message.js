@@ -9,7 +9,7 @@ export default {
   },
   methods: {
     getMessage(){
-      this.message = 'Hello I am mixins'
+      this.message = 'Mixins mean that you can create and share some function in Mixins page'
     }
   }
 }
