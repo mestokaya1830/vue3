@@ -1,0 +1,5 @@
+set page title from router
+router.beforeEach((to, from, next) => {
+  document.title = to.name;
+  next()
+})

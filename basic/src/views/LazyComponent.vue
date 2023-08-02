@@ -1,8 +1,9 @@
 <template>
   <div>
     <h2>{{ title }}</h2>
+    <p>Lazy Component mean until you don't click the Button Popup is Popup Component is not loading.Look at the imspect/network tab</p>
     <input type="button" value="Open Popup Component" @click="handle=true">
-    <Popup v-if="handle" @close="handle=false"  @gettext="showText"/>
+    <Popup v-if="handle" @close="handle=false" />
   </div>
 </template>
 
@@ -12,20 +13,16 @@ import { defineAsyncComponent } from 'vue';
 const Popup = defineAsyncComponent(
   () => import('../components/Popup.vue')
 )
+
 export default {
-  name:'Component-Event',
+  name:'Lazy Component',
   components:{
     Popup
   },
   data () {
     return {
-      title:'Component Event Page',
+      title:'Lazy Component',
       handle:false
-    }
-  },
-  methods:{
-    showText(event){
-      alert(event)
     }
   }
 };

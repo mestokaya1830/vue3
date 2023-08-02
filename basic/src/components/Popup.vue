@@ -2,17 +2,23 @@
   <div>
     <h1>Popup Component</h1>
     <button @click="$emit('close')">Close Popup Component</button>
+    <input type="text" @change= "$emit('gettext', $event.target.value)" placeholder="Type text and Enter">
+    <!-- <input type="text" @change= "sendText" placeholder="Type text and Enter"> -->
   </div>
 </template>
 <script>
   export default {
     name: "Popup",
-    emits:['close'],
     data() {
       return {
         
       };
     },
+    methods:{
+      sendText(event){
+        this.$emit('gettext', event.target.value)
+      }
+    }
   };
   </script>
   <style scoped>
