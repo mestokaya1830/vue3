@@ -5,6 +5,8 @@
       <li><router-link class="links" to="/externalplugin">External Plugin</router-link></li>
       <li><router-link class="links" to="/componentplugin">Component Plugin</router-link></li>
       <li><router-link class="links" to="/directiveplugin">Directive Plugin</router-link></li>
+      <li><router-link class="links" to="/mixinplugin">Mixin Plugin</router-link></li>
+      <li><router-link class="links" to="/provideplugin">Provide Plugin</router-link></li>
     </ul>
   </div>
 </template>

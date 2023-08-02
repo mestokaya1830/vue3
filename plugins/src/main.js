@@ -5,6 +5,8 @@ import store from './store'
 import ExternalPlugin from './plugins/external-plugin';
 import ComponentPlugin from './plugins/compnent-plugin';
 import DirectivePlugin from './plugins/directive-plugin';
+import MixinPlugin from './plugins/mixin-plugin';
+import ProvidePlugin from './plugins/provide-plugin';
 
 const mainPlugin = {
   install(app){
@@ -20,4 +22,6 @@ createApp(App)
 .use(ExternalPlugin)
 .use(ComponentPlugin)
 .use(DirectivePlugin)
+.use(MixinPlugin)
+.use(ProvidePlugin)
 .mount('#app')
