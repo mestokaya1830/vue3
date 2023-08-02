@@ -2,7 +2,7 @@ export default {
 
   install(app, option){
     const logout = () => {
-      console.log('Logout Plugin')
+      alert('Logout Plugin')
     }
     app.provide('myLogout', logout)
   }
