@@ -2,7 +2,6 @@
   <div>
     <h2>{{ title }}</h2>
     <p>{{ message }}</p>
-    <p>{{ user }}</p>
   </div>
 </template>
 

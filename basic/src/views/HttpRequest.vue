@@ -17,6 +17,7 @@ export default {
   name: "Http Request",
   data() {
     return {
+      title: 'Http Request',
       Users: {},
     };
   },

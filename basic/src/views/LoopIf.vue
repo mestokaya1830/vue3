@@ -1,13 +1,12 @@
 <template>
   <div>
     <h2>{{ title }}</h2>
-
-      <div v-for="item, index in products" :key="index">
+      <template v-for="item, index in products" :key="index">
         <div class="list" v-if="item.price > 120">
           <span>{{ item.name }}</span>
           <span >{{ item.price }}</span>
         </div>
-      </div>
+      </template>
   </div>
 </template>
 
