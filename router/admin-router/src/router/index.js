@@ -6,6 +6,7 @@ import Users from "../views/Account/Users.vue";
 import Profile from "../views/Account/Profile.vue";
 import Balance from "../views/Account/Balance.vue";
 import Bets from "../views/Account/Bets.vue";
+import NotFound from "../views/NotFound.vue";
 
 const routes = [
   {
@@ -17,6 +18,11 @@ const routes = [
     path: "/news",
     name: "News",
     component: News,
+  },
+  {
+    path: "/:pathName(.*)*",
+    name: "NotFound",
+    component: NotFound,
   },
   {
     path: "/account",
