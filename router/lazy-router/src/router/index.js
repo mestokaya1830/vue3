@@ -1,7 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
-import Home from "../views/Home.vue";
-import Todos from "../views/Todos.vue";
-import Hooks from "../views/Hooks.vue";
+
+//pre loading
+import Home from '../views/Home.vue'
 
 const routes = [
   {
@@ -12,20 +12,18 @@ const routes = [
   {
     path: "/todos",
     name: "Todos",
-    component: Todos,
+    component: () => import('../views/Todos.vue')
   },
-  // {
-  //   path: "/hooks",
-  //   name: "Hooks",
-  //   component: Hooks,
-  // },
   {
     path: "/hooks",
     name: "Hooks",
     component: () => import('../views/Hooks.vue')
   },
-
-  
+  {
+    path: "/:pathName(.*)*",
+    name: "NotFOund",
+    component: () => import('../views/NotFound.vue')
+  }
 ];
 
 const router = createRouter({

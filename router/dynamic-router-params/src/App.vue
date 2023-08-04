@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar />
-    <router-view id="master-page" />
+    <RouterView :key="$route.path" id="master-page" />
   </div>
 </template>
 <script>

@@ -1,167 +1,147 @@
 import { createWebHistory, createRouter } from "vue-router";
+
 import Home from "../views/Home.vue";
-import Binding from "../views/Binding.vue";
-import Flow from "../views/Flow.vue";
-import Loop from "../views/Loop.vue";
-import LoopIf from "../views/LoopIf.vue";
-import LoopFilter from "../views/LoopFilter.vue";
-import Methods from "../views/Methods.vue";
-import Events from "../views/Events.vue";
-import Form from "../views/Form.vue";
-import FormCheckbox from "../views/FormCheckbox.vue";
-import FormRadio from "../views/FormRadio.vue";
-import Modifiers from "../views/Modifiers.vue";
-import Computed from "../views/Computed.vue";
-import Watcher from "../views/Watcher.vue";
-import Component from "../views/Component.vue";
-import ComponentProp from "../views/ComponentProp.vue";
-import ComponentPropDynamic from "../views/ComponentPropDynamic.vue";
-import LazyComponent from "../views/LazyComponent.vue";
-import Slot from "../views/Slot.vue";
-import ProvideInject from "../views/ProvideInject.vue";
-import ComponentEvent from "../views/ComponentEvent.vue";
-import HttpRequest from "../views/HttpRequest.vue";
-import Refs from "../views/Refs.vue";
-import Mixins from "../views/Mixins.vue";
-import Vuex from "../views/Vuex.vue";
-import Hooks from "../views/Hooks.vue";
-import Todos from "../views/Todos.vue";
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    component: Home
   },
   {
     path: "/binding",
     name: "Binding",
-    component: Binding,
+    component: () => import("../views/Binding.vue")
   },
   {
     path: "/flow",
     name: "Flow",
-    component: Flow,
+    component: () => import("../views/Flow.vue")
   },
   {
     path: "/loopif",
     name: "LoopIf",
-    component: LoopIf,
+    component: () => import("../views/LoopIf.vue")
   },
   {
     path: "/loop",
     name: "Loop",
-    component: Loop,
+    component: () => import("../views/Loop.vue")
   },
   {
     path: "/loopfilter",
     name: "LoopFilter",
-    component: LoopFilter,
+    component: () => import("../views/LoopFilter.vue")
   },
   {
     path: "/methods",
     name: "Methods",
-    component: Methods,
+    component: () => import("../views/Methods.vue")
   },
   {
     path: "/events",
     name: "Events",
-    component: Events,
+    component: () => import("../views/Events.vue")
   },
   {
     path: "/form",
     name: "Form",
-    component: Form,
+    component: () => import("../views/Form.vue")
   },
   {
     path: "/formcheckbox",
     name: "FormCheckbox",
-    component: FormCheckbox,
+    component: () => import("../views/FormCheckbox.vue")
   },
   {
     path: "/formradio",
     name: "FormRadio",
-    component: FormRadio,
+    component: () => import("../views/FormRadio.vue")
   },
   {
     path: "/modifiers",
     name: "Modifiers",
-    component: Modifiers,
+    component: () => import("../views/Modifiers.vue")
   },
   {
     path: "/computed",
     name: "Computed",
-    component: Computed,
+    component: () => import("../views/Computed.vue")
   },
   {
     path: "/watcher",
     name: "Watcher",
-    component: Watcher,
+    component: () => import("../views/Watcher.vue")
   },
   {
     path: "/component",
     name: "Component",
-    component: Component,
+    component: () => import("../views/Component.vue")
   },
   {
     path: "/componentprop",
     name: "ComponentProp",
-    component: ComponentProp,
+    component:() => import("../views/ComponentProp.vue")
   },
   {
     path: "/componentpropdynamic",
     name: "ComponentPropDynamic",
-    component: ComponentPropDynamic,
+    component: () => import("../views/ComponentPropDynamic.vue")
   },
   {
     path: "/slot",
     name: "Slot",
-    component: Slot,
+    component: () => import("../views/Slot.vue")
   },
   {
     path: "/provideinject",
     name: "ProvideInjectde",
-    component: ProvideInject,
+    component: () => import("../views/ProvideInject.vue")
   },
   {
     path: "/componentevent",
     name: "ComponentEvent",
-    component: ComponentEvent,
+    component: () => import("../views/ComponentEvent.vue")
   },
   {
     path: "/lazycomponent",
     name: "LazyComponent",
-    component: LazyComponent,
+    component: () => import("../views/LazyComponent.vue")
   },
   {
     path: "/httprequest",
     name: "HttpRequest",
-    component: HttpRequest,
+    component: () => import("../views/HttpRequest.vue")
+  },
+  {
+    path: "/getlocalfile",
+    name: "GetLocalFile",
+    component: () => import("../views/GetLocalFile.vue")
   },
   {
     path: "/refs",
     name: "Refs",
-    component: Refs,
+    component: () => import("../views/Refs.vue")
   },
   {
     path: "/mixins",
     name: "Mixins",
-    component: Mixins,
+    component: () => import("../views/Mixins.vue")
   },
   {
     path: "/vuex",
     name: "Vuex",
-    component: Vuex,
+    component: () => import("../views/Vuex.vue")
   },
   {
     path: "/hooks",
     name: "Hooks",
-    component: Hooks,
+    component: () => import("../views/Hooks.vue")
   },
   {
     path: "/todos",
     name: "Todos",
-    component: Todos,
+    component:() => import("../views/Todos.vue")
   }
   
 ];
