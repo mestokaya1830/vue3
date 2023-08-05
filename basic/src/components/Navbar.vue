@@ -16,6 +16,7 @@
       <li><router-link class="links" to="/computed">Computed</router-link></li>
       <li><router-link class="links" to="/watcher">Watcher</router-link></li>
       <li><router-link class="links" to="/component">Component</router-link></li>
+      <li><router-link class="links" to="/componentglobal">Component Global</router-link></li>
       <li><router-link class="links" to="/componentprop">ComponentProp</router-link></li>
       <li><router-link class="links" to="/componentpropdynamic">ComponentPropDynamic</router-link></li>
       <li><router-link class="links" to="/componentevent">Component-Event</router-link></li>

@@ -1,6 +1,3 @@
-<script setup>
-  import AlertProp from '../components/AlertProp.vue'
-</script>
 <template>
   <div>
     <h2>{{ title }}</h2>
@@ -10,6 +7,7 @@
 </template>
 
 <script>
+import AlertProp from '../components/AlertProp.vue'
 export default {
   name:'Component-Prop-Dynamic',
   data () {

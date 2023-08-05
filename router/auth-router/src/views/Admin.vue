@@ -1,17 +1,17 @@
 <template>
   <div>
     <h2>{{ title }}</h2>
-    <Alert />
+    <h3>Welcome: {{ message }}</h3>
   </div>
 </template>
 
 <script>
-import Alert from '../components/Alert.vue'
 export default {
-  name:'Component',
+  name:'Admin',
   data () {
     return {
-      title:'Component Page',
+      title:'Admin Page',
+      message:window.user
     }
   }
 };

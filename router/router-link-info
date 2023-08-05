@@ -1,6 +1,20 @@
-if you want to be sure page still re-rendering use key word for RouterView
+if you want to be sure page still re-rendering use key word for RouterView-----------
 <RouterView :key="$route.path" />
 
+if you wont to make historyback use replace ,ethod instead of push-----------------
+this.$router.replace('/dashboard')
+
+if you want redirect '/home' to '/' route use alias in route declaration-------------------------------------
+under the home route declear this
+{
+  path:'/',
+  name: 'home',
+  component: () => import('./views/home.vue'),
+  alias: '/home'
+}
+
+
+//this is a navigation guard to set document title
 set page title from router----------------------------in router/index.js
 router.beforeEach((to, from, next) => {
   document.title = to.name;
@@ -40,6 +54,11 @@ prop -----------------------------------------in router/index.js
    prop: true //catch this in the vue file like component prop
 },
 
+
+go direction----------------------------------------------------------
+this.$router.go(-1) //go back or (1) forward
+this.$router.back()
+window.history.back()
 
 
 router declare----------------------------------------in navbar.vue
@@ -85,19 +104,3 @@ router declare----------------------------------------in navbar.vue
  }
 </script>
 
-<style>
-  ul{
-    display: flex;
-    list-style: none;
-  }
-  ul li{
-    margin: 10px;
-  }
-  ul li .links{
-    text-decoration: none;
-  }
-  .active{
-    background: #ddd;
-    padding: 5px 10px;
-  }
-</style>

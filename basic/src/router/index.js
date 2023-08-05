@@ -79,6 +79,11 @@ const routes = [
     component: () => import("../views/Component.vue")
   },
   {
+    path: "/componentglobal",
+    name: "ComponentGlobal",
+    component: () => import("../views/ComponentGlobal.vue")
+  },
+  {
     path: "/componentprop",
     name: "ComponentProp",
     component:() => import("../views/ComponentProp.vue")

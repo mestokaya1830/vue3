@@ -1,17 +1,15 @@
 <template>
   <div>
     <h2>{{ title }}</h2>
-    <Alert />
   </div>
 </template>
 
 <script>
-import Alert from '../components/Alert.vue'
 export default {
-  name:'Component',
+  name:'Home',
   data () {
     return {
-      title:'Component Page',
+      title:'Home'
     }
   }
 };
