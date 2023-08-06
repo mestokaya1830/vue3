@@ -19,7 +19,7 @@ export default createStore({
     },
     checkAuth(state){
       if(localStorage.getItem('auth')){
-        state.form = localStorage.getItem('auth')
+        state.form = JSON.parse(localStorage.getItem('auth'))
       }
     }
   },
