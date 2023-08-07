@@ -4,6 +4,10 @@ export default {
         title: 'Vue External'
       }
     },
+    mounted(){
+      console.log(this)
+    },
+
     methods: {
       
     }
