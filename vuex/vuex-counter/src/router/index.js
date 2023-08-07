@@ -9,16 +9,10 @@ const routes = [
     component: Home,
   },
   {
-    path: "/admin",
-    name: "Admin",
-    component: () => import('../views/Admin.vue')
+    path: "/vuexcounter",
+    name: "/VuexCounter",
+    component: () => import('../views/VuexCounter.vue')
   },
-  {
-    path: "/login",
-    name: "Login",
-    component: () => import('../views/Login.vue')
-  },
-
   {
     path: "/:catchAll(.*)",
     component: () => import('../views/NotFound.vue')

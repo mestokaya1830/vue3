@@ -9,16 +9,15 @@ const routes = [
     component: Home,
   },
   {
-    path: "/admin",
-    name: "Admin",
-    component: () => import('../views/Admin.vue')
+    path: "/vuexactions",
+    name: "/VuexActions",
+    component: () => import('../views/VuexActions.vue')
   },
   {
-    path: "/login",
-    name: "Login",
-    component: () => import('../views/Login.vue')
+    path: "/vuexGetters",
+    name: "/VuexGetters",
+    component: () => import('../views/VuexGetters.vue')
   },
-
   {
     path: "/:catchAll(.*)",
     component: () => import('../views/NotFound.vue')
