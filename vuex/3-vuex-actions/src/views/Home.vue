@@ -1,21 +1,20 @@
 <template>
   <div class="wrapper">
     <h2>{{ title }}</h2>
-    <p>Actions used for async operation</p>
-    <ul v-if="$store.state.users !== null">
-      <li v-for="item in $store.state.users" :key="item.id">
+    <h1>{{ counter }}</h1>
+
+    <ul v-if="users !== null">
+      <li v-for="item in users" :key="item.id">
         <span>{{ item.id }}</span>
         <span>{{ item.name }}</span>
       </li>
     </ul>
 
-    <p>Button Dispatched Direct</p>
-    <input type="button" @click="$store.dispatch('getUsers')" value="Get Users">
+    <input type="button" @click="getUsers()" value="Get Users">
 
-
-    <p>Here comes from Getters</p>
-    <ul v-if="$store.state.users !== null">
-      <li v-for="item in $store.getters.filterUsers" :key="item.id">
+    <h3>Filtered-Users will come from Computed</h3>
+    <ul v-if="users !== null">
+      <li v-for="item in filterUsers" :key="item.id">
         <span>{{ item.id }}</span>
         <span>{{ item.name }}</span>
       </li>
@@ -25,10 +24,24 @@
 
 <script>
 export default {
-  name:'VuexActions',
+  name:'FetchLocal',
   data () {
     return {
-      title:'Fetch Async Data With Vuex Actions',
+      title:'Fetch With Local State',
+      users: null
+    }
+  },
+  computed: {
+    filterUsers(){
+      if(this.users !== null){
+        return this.users.filter(item => item.id < 5)
+      }
+    }
+  },
+  methods: {
+    async getUsers(){
+      const result = await fetch('https://jsonplaceholder.typicode.com/users')
+      this.users = await result.json()
     }
   }
 };

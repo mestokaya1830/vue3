@@ -14,6 +14,11 @@ const routes = [
     component: () => import('../views/VuexActions.vue')
   },
   {
+    path: "/vuexmapactions",
+    name: "/VuexMapActions",
+    component: () => import('../views/VuexMapActions.vue')
+  },
+  {
     path: "/:catchAll(.*)",
     component: () => import('../views/NotFound.vue')
   }

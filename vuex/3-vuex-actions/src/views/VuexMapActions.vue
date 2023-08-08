@@ -9,10 +9,9 @@
       </li>
     </ul>
 
-    <p>Button Dispatched Direct</p>
-    <input type="button" @click="$store.dispatch('getUsers')" value="Get Users">
-
-
+    <p>Button Dispatched in mapActions</p>
+    <input type="button" @click="getUsers" value="Get Users">
+    
     <h3>Filtered-Users will come from Getters</h3>
     <ul v-if="$store.state.users !== null">
       <li v-for="item in $store.getters.filterUsers" :key="item.id">
@@ -24,12 +23,19 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
-  name:'VuexActions',
+  name:'VuexMapActions',
   data () {
     return {
-      title:'Fetch Async Data With Vuex Actions',
+      title:'Fetch Async Data With Vuex mapActions',
     }
+  },
+  methods:{
+    ...mapActions([
+      'getUsers'
+    ])
   }
 };
 </script>

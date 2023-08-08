@@ -3,7 +3,8 @@
     <!-- standart way -->
     <ul>
       <li><router-link class="links" to="/">Home</router-link></li>
-      <li><router-link class="links" to="/vuexactions">VuexActions</router-link></li>
+      <li><router-link class="links" to="/vuexactions">Vuex Actions</router-link></li>
+      <li><router-link class="links" to="/vuexmapactions">Vuex mapActions</router-link></li>
     </ul>
   </div>
 </template>

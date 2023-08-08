@@ -4,12 +4,15 @@
     <p>Here comes from State</p>
     <h1>{{  $store.state.counter }}</h1>
 
-    <p>Here comes from mapGetters</p>
-    <h1>{{ doubble }}</h1>
-    <h1>{{ multiple }}</h1>
+    <p>Here comes from Doubble Getters</p>
+    <h1>{{ $store.getters.doubble }}</h1>
+    
+    
+    <p>Here comes from Multiple Getters</p>
+    <h1>{{ $store.getters.multiple }}</h1>
 
 
-    <p>Buttons triggered via mapMutations</p>
+    <p>Buttons triggered Commit via mapMutations</p>
     <div class="wrapper">
       <input type="button" @click="Increase" value="+">
       <input type="button" @click="Decrease" value="-">
@@ -18,22 +21,16 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
 import { mapMutations } from 'vuex';
 
 export default {
-  name:'VuexCounter',
+  name:'VuexMapMutations',
   data () {
     return {
-      title:'Counter With Vuex And mapGetters',
+      title:'Counter With Vuex mapMutations',
     }
   },
-  computed:{
-    ...mapGetters([
-      'doubble',
-      'multiple'
-    ])
-  },
+
   methods:{
     ...mapMutations([
       'Increase',
