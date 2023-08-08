@@ -1,14 +1,18 @@
 <template>
   <div>
     <h2>{{ title }}</h2>
-    <p>Actions used for async operation</p>
+    <p>
+      Mutations used for sync operation <br>
+      So don't use for http-request or external api <br>
+      Go to the Actions link and test it
+    </p>
     <ul v-if="$store.state.users !== null">
       <li v-for="item in $store.state.users" :key="item.id">
         <span>{{ item.id }}</span>
         <span>{{ item.name }}</span>
       </li>
     </ul>
-    <input type="button" value="Get Users From Vuex" @click="$store.dispatch('getUsers')">
+    <input type="button" value="Get Users With Muatations" @click="$store.commit('getUsers')">
   </div>
 </template>
 
@@ -17,8 +21,11 @@ export default {
   name:'VuexFetch',
   data () {
     return {
-      title:'Actions In Vuex',
+      title:'Mutations In Vuex',
     }
+  },
+  mounted(){
+    
   }
 };
 </script>

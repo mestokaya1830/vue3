@@ -9,14 +9,14 @@ const routes = [
     component: Home,
   },
   {
-    path: "/vuexactions",
-    name: "/VuexActions",
-    component: () => import('../views/VuexActions.vue')
+    path: "/mapgetters",
+    name: "/MapGetters",
+    component: () => import('../views/MapGetters.vue')
   },
   {
-    path: "/vuexGetters",
-    name: "/VuexGetters",
-    component: () => import('../views/VuexGetters.vue')
+    path: "/mapmutations",
+    name: "/MapMutations",
+    component: () => import('../views/MapMutations.vue')
   },
   {
     path: "/:catchAll(.*)",

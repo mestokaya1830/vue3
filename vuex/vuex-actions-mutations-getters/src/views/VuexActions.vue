@@ -8,7 +8,7 @@
         <span>{{ item.name }}</span>
       </li>
     </ul>
-    <input type="button" value="Get Users From Vuex" @click="$store.dispatch('getUsers')">
+    <input type="button" value="Get Users With Actions" @click="$store.dispatch('getUsers')">
   </div>
 </template>
 

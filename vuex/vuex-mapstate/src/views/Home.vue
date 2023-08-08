@@ -1,14 +1,18 @@
 <template>
   <div>
-    <h2>{{ title }}</h2>
-    <p>Fetch data in Home Page</p>
-    <ul>
-      <li v-for="item in users" :key="item.id">
-        <span>{{ item.id }}</span>
-        <span>{{ item.name }}</span>
-      </li>
-    </ul>
-    <input type="button" value="Get Users" @click="getUsers()">
+    <h2>{{ title }}</h2> 
+    <p style="color: red;">Getters In-Line</p>
+    <p>From state</p>
+    <h1>{{ $store.state.counter }}</h1>
+    <p>Doubble From getters</p>
+    <h1>{{ $store.getters.doubble }}</h1>
+
+    <p>Multiple From getters</p>
+    <h1>{{ $store.getters.multiple }}</h1>
+    <div class="wrapper">
+      <input type="button" @click="$store.commit('Increase')" value="+">
+      <input type="button" @click="$store.commit('Decrease')" value="-">
+    </div>
   </div>
 </template>
 
@@ -18,32 +22,15 @@ export default {
   data () {
     return {
       title:'Home',
-      users: null
-    }
-  },
-  methods:{
-    async getUsers(){
-      const result = await fetch('https://jsonplaceholder.typicode.com/users')
-      this.users = await result.json()
     }
   }
 };
 </script>
 
 <style scoped>
-ul{
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-}
-ul li{
-  margin: 5px 0;
-}
- ul li span{
-  margin: 0 10px;
- }
-input{
+div > input{
   margin: 0 5px;
+  font-size: 20px;
   padding: 0 20px;
 }
 </style>

@@ -2,29 +2,33 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-   users: null
+   counter: 0
   },
   mutations: {
-    getUsers(state, param){
-      state.users = param //payload comes from actions commit
-    }
+    Increase(state){
+      state.counter++
+    },
+    Decrease(state){
+      state.counter--
+    },
   },
    
   //actions used for async operation
   actions: {
-    async getUsers({ commit }){
-      const result = await fetch('https://jsonplaceholder.typicode.com/users')
-      const final = await result.json()
-      commit('getUsers', final)
+    
+  },
+
+  //getters used for filter and manupilation
+  getters: {
+    doubble(state){
+      return state.counter * 2
+    },
+
+    multiple(state){
+      return state.counter * 5
     }
   },
 
-  //getters used for filter and manuplation
-  getters: {
-    filterUsers(state){
-      return state.users.filter(item => item.id < 5)
-    }
-  },
   modules: {
     
   }

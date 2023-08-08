@@ -19,7 +19,7 @@ export default createStore({
     }
   },
 
-  //getters used for filter and manuplation
+  //getters used for filter and manupilation
   getters: {
     filterUsers(state){
       return state.users.filter(item => item.id < 5)
