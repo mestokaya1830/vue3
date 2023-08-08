@@ -1,25 +1,44 @@
 <template>
   <div>
     <h2>{{ title }}</h2>
-    <p>Here comes from State</p>
-    <h1>{{  $store.state.counter }}</h1>
+    <h1>{{ counter }}</h1>
 
-    <p>Here comes from Getters</p>
-    <h1>{{  $store.getters.doubble }}</h1>
-    <h1>{{  $store.getters.multiple }}</h1>
+    <p>Doubble From Computed</p>
+    <h1>{{ doubble }}</h1>
+
+    <p>Multiple From Computed</p>
+    <h1>{{ multiple }}</h1>
+
     <div class="wrapper">
-      <input type="button" @click="$store.commit('Increase')" value="+">
-      <input type="button" @click="$store.commit('Decrease')" value="-">
+      <input type="button" @click="Increase()" value="+">
+      <input type="button" @click="Decrease()" value="-">
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name:'VuexCounter',
+  name:'Counter',
   data () {
     return {
-      title:'Counter With Vuex And Getters',
+      title:'Counter With Local State',
+      counter: 0
+    }
+  },
+  methods:{
+    Increase(){
+      this.counter++
+    },
+    Decrease(){
+      this.counter--
+    }
+  },
+  computed:{
+    doubble(){
+      return this.counter * 2
+    },
+    multiple(){
+      return this.counter * 5
     }
   }
 };
