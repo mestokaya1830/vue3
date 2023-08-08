@@ -1,8 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "../views/Home.vue";
-import About from "../views/About.vue";
-import Contact from "../views/Contact.vue";
-import NotFound from "../views/NotFound.vue";
+
 
 const routes = [
   {
@@ -11,19 +9,14 @@ const routes = [
     component: Home,
   },
   {
-    path: "/about",
-    name: "About",
-    component: About,
+    path: "/computed",
+    name: "Computed",
+    component: () => import('../views/Computed.vue')
   },
   {
-    path: "/contact",
-    name: "Contact",
-    component: Contact,
-  },
-  {
-    path: "/:pathName(.*)*",
+    path: "/:catchAll(.*)",
     name: "NotFound",
-    component: NotFound,
+    component: () => import('../views/NotFound.vue'),
   },
   
 ];

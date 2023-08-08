@@ -2,8 +2,7 @@
   <div>
     <ul>
       <li><router-link class="links router-link-active router-link-exact-active" to="/">Home</router-link></li>
-      <li><router-link class="links router-link-active router-link-exact-active" to="/about">About</router-link></li>
-      <li><router-link class="links router-link-active router-link-exact-active" to="/contact">Contact</router-link></li>
+      <li><router-link class="links router-link-active router-link-exact-active" to="/computed">Computed</router-link></li>
     </ul>
   </div>
 </template>
