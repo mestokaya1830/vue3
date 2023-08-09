@@ -1,10 +1,10 @@
 <template>
   <div>
-    <ul>
-      <li><router-link class="links router-link-active router-link-exact-active" to="/">Home</router-link></li>
-      <li><router-link class="links router-link-active router-link-exact-active" to="/about">About</router-link></li>
-      <li><router-link class="links router-link-active router-link-exact-active" to="/contact">Contact</router-link></li>
-    </ul>
+    <nav>
+      <RouterLink to="/" class="links router-link-active router-link-exact-active">Home</RouterLink>
+      <RouterLink to="/about" class="links router-link-active router-link-exact-active">About</RouterLink>
+      <RouterLink to="/contact" class="links router-link-active router-link-exact-active">Contact</RouterLink>
+    </nav>
   </div>
 </template>
 
@@ -19,19 +19,17 @@
  }
 </script>
 
-<style>
-  ul{
+<style scoped>
+  nav{
     display: flex;
-    list-style: none;
   }
-  ul li{
+  .links{
     margin: 10px;
   }
-  ul li .links{
+  .links{
     text-decoration: none;
   }
   .active{
-    background: #ddd;
-    padding: 5px 10px;
+    color: green;
   }
 </style>

@@ -1,36 +1,24 @@
 <template>
   <div>
-    <ul>
-      <li><router-link class="links" to="/">Home</router-link></li>
-      <li><router-link class="links" to="/todos">Todos</router-link></li>
-      <li><router-link class="links" to="/hooks">Hooks</router-link></li>
-    </ul>
+    <nav>
+      <router-link to="/" class="links router-link-active router-link-exact-active">Home</router-link>
+      <router-link to="/todos" class="links router-link-active router-link-exact-active">Todos</router-link>
+      <router-link to="/hooks" class="links router-link-active router-link-exact-active">Hooks</router-link>
+    </nav>
   </div>
 </template>
 
-<style>
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  ul {
+<style scoped>
+  nav{
     display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    margin: 10px;
-  }
-  ul > li{
-    margin: 5px;
   }
   .links{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ddd;
-    color: black;
-    padding: 5px 10px;
+    margin: 10px;
+  }
+  .links{
     text-decoration: none;
-    border-radius: 3px;
+  }
+  .active{
+    color: green;
   }
 </style>

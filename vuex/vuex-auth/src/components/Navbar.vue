@@ -1,21 +1,22 @@
-<template lang="">
+<template>
   <div>
-    <ul>
-      <li><router-link to="/">Home</router-link></li>
-    </ul>
+    <nav>
+      <router-link to="/" class="links router-link-active router-link-exact-active">Home</router-link>
+    </nav>
   </div>
 </template>
 
-<script>
-export default {
-  mounted(){
-    
-  },
-  methods:{
-    
+<style scoped>
+  nav{
+    display: flex;
   }
-}
-</script>
-<style>
-  
+  .links{
+    margin: 10px;
+  }
+  .links{
+    text-decoration: none;
+  }
+  .active{
+    color: green;
+  }
 </style>

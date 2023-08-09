@@ -1,34 +1,24 @@
 <template>
   <div>
-    <!-- standart way -->
-    <ul>
-      <li><router-link class="links" to="/">Home</router-link></li>
-      <li><router-link class="links" to="/vuexactions">Vuex Actions</router-link></li>
-      <li><router-link class="links" to="/vuexmapactions">Vuex mapActions</router-link></li>
-    </ul>
+    <nav>
+      <router-link to="/" class="links router-link-active router-link-exact-active">Home</router-link>
+      <router-link to="/vuexactions" class="links router-link-active router-link-exact-active">Vuex Actions</router-link>
+      <router-link to="/vuexmapactions" class="links router-link-active router-link-exact-active">Vuex mapActions</router-link>
+    </nav>
   </div>
 </template>
 
-<script>
- export default {
-  name:'',
-  data () {
-    return {
-     
-    }
-  }
- }
-</script>
-
-<style>
-  ul{
+<style scoped>
+  nav{
     display: flex;
-    list-style: none;
   }
-  ul li{
+  .links{
     margin: 10px;
   }
-  ul li .links{
+  .links{
     text-decoration: none;
+  }
+  .active{
+    color: green;
   }
 </style>

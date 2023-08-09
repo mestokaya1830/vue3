@@ -1,37 +1,24 @@
 <template>
   <div>
-    <ul>
-      <li><router-link class="links router-link-active router-link-exact-active" to="/">Home</router-link></li>
-      <li><router-link class="links router-link-active router-link-exact-active" to="/about">About</router-link></li>
-      <li><router-link class="links router-link-active router-link-exact-active" to="/contact">Contact</router-link></li>
-    </ul>
+    <nav>
+      <router-link to="/" class="links router-link-active router-link-exact-active">Home</router-link>
+      <router-link to="/about" class="links router-link-active router-link-exact-active">About</router-link>
+      <router-link to="/contact" class="links router-link-active router-link-exact-active">Contact</router-link>
+    </nav>
   </div>
 </template>
 
-<script>
- export default {
-  name:'',
-  data () {
-    return {
-      
-    }
-  }
- }
-</script>
-
-<style>
-  ul{
+<style scoped>
+  nav{
     display: flex;
-    list-style: none;
   }
-  ul li{
+  .links{
     margin: 10px;
   }
-  ul li .links{
+  .links{
     text-decoration: none;
   }
   .active{
-    background: #ddd;
-    padding: 5px 10px;
+    color: green;
   }
 </style>

@@ -1,32 +1,22 @@
 <template>
   <div>
-    <!-- standart way -->
-    <ul>
-      <li><router-link class="links" to="/">Home</router-link></li>
-    </ul>
+    <nav>
+      <router-link to="/" class="links router-link-active router-link-exact-active">Home</router-link>
+    </nav>
   </div>
 </template>
 
-<script>
- export default {
-  name:'',
-  data () {
-    return {
-     
-    }
-  }
- }
-</script>
-
-<style>
-  ul{
+<style scoped>
+  nav{
     display: flex;
-    list-style: none;
   }
-  ul li{
+  .links{
     margin: 10px;
   }
-  ul li .links{
+  .links{
     text-decoration: none;
+  }
+  .active{
+    color: green;
   }
 </style>

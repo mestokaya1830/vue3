@@ -1,12 +1,11 @@
 <template>
   <div>
-    <!-- standart way -->
-    <ul>
-      <li><router-link class="links" to="/">Home</router-link></li>
-      <li><router-link class="links" to="/users">Users</router-link></li>
-      <li><router-link class="links" to="/login">Login</router-link></li>
-      <li><router-link class="links" to="/admin">Admin</router-link></li>
-    </ul>
+    <nav>
+      <router-link to="/" class="links router-link-active router-link-exact-active">Home</router-link>
+      <router-link to="/users" class="links router-link-active router-link-exact-active">Users</router-link>
+      <router-link to="/login" class="links router-link-active router-link-exact-active">Login</router-link>
+      <router-link to="/admin" class="links router-link-active router-link-exact-active">Admin</router-link>
+    </nav>
   </div>
 </template>
 
@@ -21,15 +20,17 @@
  }
 </script>
 
-<style>
-  ul{
+<style scoped>
+  nav{
     display: flex;
-    list-style: none;
   }
-  ul li{
+  .links{
     margin: 10px;
   }
-  ul li .links{
+  .links{
     text-decoration: none;
+  }
+  .active{
+    color: green;
   }
 </style>
