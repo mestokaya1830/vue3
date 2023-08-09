@@ -2,6 +2,7 @@
   <div>
     <h2>{{ title }}</h2>
     <h3>{{ userDetails }}</h3>
+    <h3>{{ $route.params.id }}</h3>
     <h3 @click="goBack()" style="cursor: pointer;">Go Back</h3>
   </div>
 </template>

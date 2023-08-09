@@ -1,15 +1,13 @@
 <template>
   <div>
     <h2>{{ title }}</h2>
-
-    <ul>
-      <li v-for="item in users" :key="item.index">
-          <span>{{ item.index }}</span>
-          <span>{{ item.name }}</span>
-          <router-link class="links" :to="`/user/${item.index}`">Details</router-link>
-      </li>
-    </ul>
-    
+    <nav v-for="item in users" :key="item.index">
+      <router-link class="links" :to="`/user/${item.index}`">
+      <!-- <router-link class="links" :to="{name:'UserDetails, params:{id: item.index}'}"> -->
+        <span>{{ item.index }}</span>
+        <span>{{ item.name }}</span>
+      </router-link>
+    </nav>
   </div>
 </template>
 
@@ -36,12 +34,16 @@ export default {
 </script>
 
 <style scoped>
-ul{
+nav{
   display: flex;
   flex-direction: column;
-  list-style: none;
 }
-ul li span{
+.links{
+  min-width: 200px;
+  text-decoration: none;
+  margin: 5px 0;
+}
+.links span{
   margin: 10px;
 }
 </style>
