@@ -3,6 +3,7 @@
     <h2>{{ title }}</h2>
     <nav v-for="item in users" :key="item.id">
       <router-link :to="`/users/${item.id}`">{{ item.name }}</router-link>
+      <!-- <router-link :to="{name: 'UserDetails', params:{id: item.id}}">{{ item.name }}</router-link> -->
     </nav>
   </div>
 </template>
