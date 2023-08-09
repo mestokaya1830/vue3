@@ -20,7 +20,7 @@ export default {
   name: "Account Page",
   data() {
     return {
-      title: "Account Page"
+      title: "Dashboard"
     }
   },
   methods: {
