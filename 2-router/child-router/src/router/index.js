@@ -1,12 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "../views/Home.vue";
-import News from "../views/News.vue";
-import Account from "../views/Account.vue";
-import Users from "../views/Account/Users.vue";
-import Profile from "../views/Account/Profile.vue";
-import Balance from "../views/Account/Balance.vue";
-import Bets from "../views/Account/Bets.vue";
-import NotFound from "../views/NotFound.vue";
+
 
 const routes = [
   {
@@ -15,39 +9,49 @@ const routes = [
     component: Home,
   },
   {
-    path: "/news",
-    name: "News",
-    component: News,
+    path: "/about",
+    name: "About",
+    component: () => import('../views/About.vue')
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: () => import('../views/Contact.vue')
   },
   {
     path: "/:pathName(.*)*",
     name: "NotFound",
-    component: NotFound,
+    component: () => import('../views/NotFound.vue'),
   },
   {
     path: "/account",
     name: "Account",
-    component: Account,
+    component: () => import('../views/Account.vue'),
     children:[
       {
         path:'/account',
         name:'Bets',
-        component: Bets
+        component: () => import('../views/Account/Bets.vue')
       },
       {
         path:'/users',
         name:'Users',
-        component: Users
+        component: () => import('../views/Account/Users.vue')
+      },
+      {
+        path:'/users/:id',
+        name:'UserDetails',
+        component: () => import('../views/Account/UserDetails.vue')
       },
       {
         path:'/profile',
         name:'Profile',
-        component: Profile
+        component: () => import('../views/Account/Profile.vue')
       },
       {
         path:'/balance',
         name:'Balance',
-        component: Balance
+        component: () => import('../views/Account/Balance.vue')
       }
     ]
   },

@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: "News",
+  name: "About",
   data() {
     return {
-      title: "News"
+      title: "About"
     }
   },
   methods: {

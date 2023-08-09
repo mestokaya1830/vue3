@@ -2,7 +2,8 @@
   <div>
     <nav>
       <router-link  to="/" class="links">Home</router-link>
-      <router-link  to="/news" class="links">News</router-link>
+      <router-link  to="/about" class="links">About</router-link>
+      <router-link  to="/contact" class="links">Contact</router-link>
       <router-link  to="/account" class="links">Account</router-link>
     </nav>
   </div>

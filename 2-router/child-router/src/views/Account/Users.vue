@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="wrapper">
     <h2>{{ title }}</h2>
+    <router-link :to="`/users/${1}`">Details</router-link>
   </div>
 </template>
 
@@ -14,3 +15,10 @@ export default {
   }
 };
 </script>
+<style scoped>
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
