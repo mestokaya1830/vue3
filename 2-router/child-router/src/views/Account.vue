@@ -3,12 +3,10 @@
     <h2>{{ title }}</h2>
     <div class="container">
       <nav>
-        <ul>
-          <li><router-link class="links" to="/account">Bets</router-link></li>
-          <li><router-link class="links" to="/users">Users</router-link></li>
-          <li><router-link class="links" to="/profile">Profile</router-link></li>
-          <li><router-link class="links" to="/balance">Balance</router-link></li>
-        </ul>
+         <router-link class="links" to="/account">Bets</router-link>
+         <router-link class="links" to="/users">Users</router-link>
+         <router-link class="links" to="/profile">Profile</router-link>
+         <router-link class="links" to="/balance">Balance</router-link>
       </nav>
       <RouterView class="router"/>
     </div>
@@ -32,6 +30,10 @@ export default {
 .container{
   display: flex;
   width: 100%;
+}
+nav{
+  display: flex;
+  flex-direction: column;
 }
 .router{
   display: flex;
