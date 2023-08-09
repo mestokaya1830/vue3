@@ -1,9 +1,9 @@
 <template>
   <div>
     <nav>
-      <RouterLink to="/" class="links router-link-active router-link-exact-active">Home</RouterLink>
-      <RouterLink to="/about" class="links router-link-active router-link-exact-active">About</RouterLink>
-      <RouterLink to="/contact" class="links router-link-active router-link-exact-active">Contact</RouterLink>
+      <RouterLink to="/" class="links">Home</RouterLink>
+      <RouterLink to="/about" class="links">About</RouterLink>
+      <RouterLink to="/contact" class="links">Contact</RouterLink>
     </nav>
   </div>
 </template>

@@ -1,9 +1,9 @@
 <template>
   <div>
     <nav>
-      <router-link to="/" class="links router-link-active router-link-exact-active">Home</router-link>
-      <router-link to="/vuexactions" class="links router-link-active router-link-exact-active">Vuex Actions</router-link>
-      <router-link to="/vuexmapactions" class="links router-link-active router-link-exact-active">Vuex mapActions</router-link>
+      <router-link to="/" class="links">Home</router-link>
+      <router-link to="/vuexactions" class="links">Vuex Actions</router-link>
+      <router-link to="/vuexmapactions" class="links">Vuex mapActions</router-link>
     </nav>
   </div>
 </template>

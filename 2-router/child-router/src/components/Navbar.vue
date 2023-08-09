@@ -1,9 +1,9 @@
 <template>
   <div>
     <nav>
-      <router-link  to="/" class="links router-link-active router-link-exact-active">Home</router-link>
-      <router-link  to="/news" class="links router-link-active router-link-exact-active">News</router-link>
-      <router-link  to="/account" class="links router-link-active router-link-exact-active">Account</router-link>
+      <router-link  to="/" class="links">Home</router-link>
+      <router-link  to="/news" class="links">News</router-link>
+      <router-link  to="/account" class="links">Account</router-link>
     </nav>
   </div>
 </template>

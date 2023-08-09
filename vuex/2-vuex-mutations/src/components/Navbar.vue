@@ -1,9 +1,9 @@
 <template>
   <div>
     <nav>
-      <router-link to="/" class="links router-link-active router-link-exact-active">Home</router-link>
-      <router-link to="/vuexmutations" class="links router-link-active router-link-exact-active">Vuex Mutations</router-link>
-      <router-link to="/vuexmapmutations" class="links router-link-active router-link-exact-active">Vuex mapMutations</router-link>
+      <router-link to="/" class="links">Home</router-link>
+      <router-link to="/vuexmutations" class="links">Vuex Mutations</router-link>
+      <router-link to="/vuexmapmutations" class="links">Vuex mapMutations</router-link>
     </nav>
   </div>
 </template>

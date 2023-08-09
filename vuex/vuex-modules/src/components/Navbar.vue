@@ -1,8 +1,8 @@
 <template>
   <div>
     <nav>
-      <router-link to="/" class="links router-link-active router-link-exact-active">Home</router-link>
-      <router-link to="/vuexfetchapi" class="links router-link-active router-link-exact-active">Vuex FetchApi</router-link>
+      <router-link to="/" class="links">Home</router-link>
+      <router-link to="/vuexfetchapi" class="links">Vuex FetchApi</router-link>
     </nav>
   </div>
 </template>

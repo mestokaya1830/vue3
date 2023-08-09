@@ -1,8 +1,8 @@
 <template>
   <div>
     <nav>
-      <router-link to="/" class="links router-link-active router-link-exact-active">Home</router-link>
-      <router-link to="/vuexcounter" class="links router-link-active router-link-exact-active">VuexCounter</router-link>
+      <router-link to="/" class="links">Home</router-link>
+      <router-link to="/vuexcounter" class="links">VuexCounter</router-link>
     </nav>
   </div>
 </template>
