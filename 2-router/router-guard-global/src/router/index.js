@@ -18,14 +18,31 @@ const routes = [
     name: "UserDetails",
     component: () => import('../views/UserDetails.vue')
   },
-  
+  {
+    path: "/login",
+    name: "Login",
+    component: () => import('../views/Login.vue'),
+  },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: () => import('../views/Admin.vue')
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  linkActiveClass: 'active',
-  linkExactActiveClass: 'active'
-});
+  linkActiveClass: "active",
+  linkExactActiveClass: "active",
+})
+
+router.beforeEach((to, from, next) => {
+  let num = 0
+  if(num == 0){
+    console.log(to.name +': '+ 'This come from Router')
+    next()
+  }
+})
 
 export default router;
