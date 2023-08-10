@@ -22,6 +22,11 @@ const routes = [
     path: "/loopif",
     name: "LoopIF",
     component:() => import("../views/LoopIF.vue")
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "notfound",
+    component:() => import("../views/NotFound.vue")
   }
 ];
 
