@@ -71,16 +71,16 @@ const router = createRouter({
   // },
 
   //to ancher
-  // scrollBehavior(to, from, savedPosition) {
-  //   if(savedPosition){
-  //     return savedPosition
-  //   } else if (to.hash) {
-  //     return {
-  //       top:document.querySelector(to.hash).offsetTop + -100,
-  //       behavior: 'smooth'
-  //     }
-  //   }
-  // },
+  scrollBehavior(to, from, savedPosition) {
+    if(savedPosition){
+      return savedPosition
+    } else if (to.hash) {
+      return {
+        top:document.querySelector(to.hash).offsetTop,
+        behavior: 'smooth'
+      }
+    }
+  },
 });
 
 export default router;
