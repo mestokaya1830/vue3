@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Navbar />
-    <RouterView :key="$route.path" id="master-page" />
+    <Navbar class="navbar"/>
+    <router-view id="master-page" />
   </div>
 </template>
 <script>
@@ -28,10 +28,11 @@
     padding: 0;
     box-sizing: border-box;
   }
-
+  .navbar{position: fixed;}
   #master-page{
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 1600px;
   }
 </style>
