@@ -9,6 +9,21 @@ const routes = [
     component: Home,
   },
   {
+    path: "/eventmodifiers",
+    name:'EventModifiers',
+    component: () => import('../views/EventModifiers.vue')
+  },
+  {
+    path: "/keymodifiers",
+    name:'KeyModifiers',
+    component: () => import('../views/KeyModifiers.vue')
+  },
+  {
+    path: "/mousemodifiers",
+    name:'MouseModifiers',
+    component: () => import('../views/MouseModifiers.vue')
+  },
+  {
     path: "/:catchAll(.*)",
     name:'NotFound',
     component: () => import('../views/NotFound.vue')

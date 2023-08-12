@@ -6,14 +6,11 @@
 
 <script>
 export default {
-  name:'Home',
+  name:'NotFound',
   data () {
     return {
-      title:'Home Page',
+      title:'This Page Not Found'
     }
-  },
-  methods:{
-    
   }
 };
 </script>

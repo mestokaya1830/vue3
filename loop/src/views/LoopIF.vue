@@ -3,7 +3,7 @@
     <h2>{{ title }}</h2>
     <p>Get the as Department</p>
     <div class="list">
-      <template v-for="item in Persons" :key="item.index" >
+      <template v-for="item in Persons" :key="item.index">
         <div v-if="item.dep == 'Sales'">
           <span>{{ item.index }}</span>
           <span>{{ item.dep }}</span>
