@@ -1,19 +1,26 @@
 <template>
   <div>
     <h2>{{ title }}</h2>
-    <p>{{ message }}</p>
   </div>
 </template>
 
 <script>
-import Message from '../Mixins/message.js'
+// import Message from '../Mixins/message.js'
+import Task from '../Mixins/alert.js'
 export default {
   name: "HomePage",
-  mixins:[Message],
+  mixins:[Task],
   data(){
     return {
       title:'Home'
     }
-  }
+  },
+  mounted(){
+   console.log(this.getTask())
+   console.log(this.getTask2())
+  },
+  // methods:{
+    
+  // }
 };
 </script>

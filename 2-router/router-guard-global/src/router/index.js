@@ -38,11 +38,45 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  let num = 0
-  if(num == 0){
-    console.log(to.name +': '+ 'This come from Router')
-    next()
-  }
+  //declear isAuthenticated in routes with meta tag
+  // if (to.name !== 'Login' && !isAuthenticated) {
+  //   next({ name: 'Login' })
+  // } else {
+  //   next()
+  // }
+  // test here
+
+  // let num = 0
+  // if(num == 0){
+  //   console.log(to.name +': '+ 'This come from Router')
+  //   next()
+  // }
+
+  // You can register a global guard with router.beforeResolve.
+  // This is similar to router.beforeEach
+  // because it triggers on every navigation,
+  // but resolve guards are called right before the navigation is confirmed,
+  // after all in-component guards and async route components are resolved
+
+  // router.beforeResolve(async to => {
+  //   if (to.meta.requiresCamera) {
+  //     try {
+  //       await askForCameraPermission()
+  //     } catch (error) {
+  //       if (error instanceof NotAllowedError) {
+  //         // ... handle the error and then cancel the navigation
+  //         return false
+  //       } else {
+  //         // unexpected error, cancel the navigation and pass the error to the global handler
+  //         throw error
+  //       }
+  //     }
+  //   }
+  // })
+
+  // router.afterEach((to, from) => {
+  //   sendToAnalytics(to.fullPath)
+  // })
 })
 
 export default router;

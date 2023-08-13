@@ -13,6 +13,9 @@ export default {
     }
   },
   beforeRouteEnter (to, from, next) {
+    // Note that beforeRouteEnter is
+    // the only guard that supports passing a callback to next in local
+    // there is no next() for beforeRouteUpdate and beforeRouteLeave
     alert('You have no permission for this page')
     if(to.name == '/Home'){
       next()
