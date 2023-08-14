@@ -24,6 +24,11 @@ const routes = [
     component: () => import('../views/MouseModifiers.vue')
   },
   {
+    path: "/inputmodifiers",
+    name:'InputModifiers',
+    component: () => import('../views/InputModifiers.vue')
+  },
+  {
     path: "/:catchAll(.*)",
     name:'NotFound',
     component: () => import('../views/NotFound.vue')

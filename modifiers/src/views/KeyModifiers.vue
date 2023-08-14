@@ -1,6 +1,55 @@
 <template>
-  <div>
+  <div class="wrapper">
     <h2>{{ title }}</h2>
+    <div>
+      <span>Keyup Modifier:</span>
+      <input type="text"  @keyup="keyupEvent($event)" placeholder="Keyup something">
+    </div>
+    <div>
+      <span>Enter Modifier:</span>
+      <input type="text" @keyup.enter="enterEvent($event)" placeholder="Enter something">
+    </div>
+    <div>
+      <span>Tab Modifier:</span>
+      <input type="text" @keydown.tab="tabEvent()" placeholder="Tab">
+    </div>
+    <div>
+      <span>Delete Modifier:</span>
+      <input type="text" @keydown.delete="deleteEvent()" placeholder="Delete">
+    </div>
+    <div>
+      <span>Esc Modifier:</span>
+      <input type="text" @keydown.esc="escEvent()" placeholder="Esc">
+    </div>
+    <div>
+      <span>Space Modifier:</span>
+      <input type="text" @keydown.space="spaceEvent()" placeholder="Space">
+    </div>
+    <div>
+      <span>Down Modifier:</span>
+      <input type="text" @keydown.down="downEvent()" placeholder="Down">
+    </div>
+    <div>
+      <span>Up Modifier:</span>
+      <input type="text" @keydown.up="upEvent()" placeholder="Up">
+    </div>
+    <div>
+      <span>Left Modifier:</span>
+      <input type="text" @keydown.left="leftEvent()" placeholder="Left">
+    </div>
+    <div>
+      <span>Right Modifier:</span>
+      <input type="text" @keydown.right="rightEvent()" placeholder="Right">
+    </div>
+    <div>
+      <span>Custom Modifier:</span>
+      <input type="text" @keydown.a="customEvent()" placeholder="Custom press a">
+    </div>
+    <div>
+      <span>Combinations:</span>
+      <input type="text" @keydown.ctrl.shift="combinationsEvent()" placeholder="Ctrl + Shift">
+      <!-- <input type="text" @keydown.ctrl.a="combinationsEvent()" placeholder="Ctrl + Shift"> -->
+    </div>
   </div>
 </template>
 
@@ -12,12 +61,64 @@ export default({
     return {
       title:'Key Modifiers',
     }
+  },
+  methods:{
+    clickEvent(){
+      alert('Hello')
+    },
+    onceEvent(){
+      alert('Once Event Execute one time')
+    },
+    enterEvent(event){
+      alert(event.target.value)
+    },
+    keyupEvent(event){
+      alert(`Code:  ${event.which} \n Key:  ${event.key}`)
+    },
+    tabEvent(){
+      alert('You pressed Tab key')
+    },
+    deleteEvent(){
+      alert('You pressed Delete key')
+    },
+    escEvent(){
+      alert('You pressed Esc key')
+    },
+    spaceEvent(){
+      alert('You pressed Space key')
+    },
+    downEvent(){
+      alert('You pressed Down key')
+    },
+    upEvent(){
+      alert('You pressed Up key')
+    },
+    leftEvent(){
+      alert('You pressed Left key')
+    },
+    rightEvent(){
+      alert('You pressed Right key')
+    },
+    customEvent(){
+      alert('You pressed A key')
+    },
+    combinationsEvent(){
+      alert('You pressed Ctrl + Shift')
+    },
   }
 });
 
 </script>
 
 <style scoped>
+.wrapper div{
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin: 10px auto;
+}
 
-
+span{
+  min-width: 200px;
+}
 </style>

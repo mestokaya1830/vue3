@@ -2,9 +2,10 @@
   <div>
     <nav>
       <router-link to="/" class="links">Home</router-link>
-      <router-link to="/eventkmodifiers" class="links">Event Modifiers</router-link>
+      <router-link to="/eventmodifiers" class="links">Event Modifiers</router-link>
       <router-link to="/keymodifiers" class="links">Key Modifiers</router-link>
-      <router-link to="/mousemodifiers" class="links">MouseModifiers</router-link>
+      <router-link to="/mousemodifiers" class="links">Mouse Modifiers</router-link>
+      <router-link to="/inputemodifiers" class="links">Inpute Modifiers</router-link>
     </nav>
   </div>
 </template>
