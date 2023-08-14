@@ -1,15 +1,18 @@
 <template>
   <div>
     <h2>{{ title }}</h2>
-    <p>{{ message }}</p>
+    <p>{{ getTask() }}</p>
+    <p>{{ getTask2() }}</p>
+    <p>{{ filterUsers }}</p>
+    <p>{{ fullName('Bidik', 'Kaya') }}</p>
   </div>
 </template>
 
 <script>
-import Message from '../Mixins/message.js'
+import Task from '../Mixins/Task.js'
 export default {
   name: "AboutPage",
-  mixins:[Message],
+  mixins:[Task],
   data(){
     return {
       title:'About'

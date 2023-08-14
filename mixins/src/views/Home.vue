@@ -1,12 +1,16 @@
 <template>
   <div>
     <h2>{{ title }}</h2>
+    <p>{{ getTask() }}</p>
+    <p>{{ getTask2() }}</p>
+    <p>{{ filterUsers }}</p>
+    <p>{{ fullName('Mesto', 'Kaya') }}</p>
+    <p>Look at the Console and you will see Mixins comes first than Home</p>
   </div>
 </template>
 
 <script>
-// import Message from '../Mixins/message.js'
-import Task from '../Mixins/alert.js'
+import Task from '../Mixins/Task.js'
 export default {
   name: "HomePage",
   mixins:[Task],
@@ -16,11 +20,10 @@ export default {
     }
   },
   mounted(){
-   console.log(this.getTask())
-   console.log(this.getTask2())
+    console.log('Home')
   },
-  // methods:{
+  methods:{
     
-  // }
+  }
 };
 </script>
