@@ -2,12 +2,16 @@
   <div class="wrapper">
     <h2>{{ title }}</h2>
     <div>
-      <span>Clcik Modifier: </span>
+      <span>Clcik Event: </span>
       <input type="button" value="Click Event" @click="clickEvent()">
     </div>
     <div>
-      <span>Once Modifier:</span>
+      <span>Once Click Event:</span>
       <input type="button" value="Once Event" @click.once="onceEvent()">
+    </div>
+    <div>
+      <span>Double Click Event:</span>
+      <span @dblclick="doubleClickEvent()">Double Click Here </span>
     </div>
   </div>
 </template>
@@ -15,10 +19,10 @@
 <script>
 
 export default({
-  name:"EventModifiers",
+  name:"ClickEvent",
   data() {
     return {
-      title:'Event Modifiers',
+      title:'Click Event',
     }
   },
   methods:{
@@ -27,6 +31,9 @@ export default({
     },
     onceEvent(){
       alert('Once Event Execute one time')
+    },
+    doubleClickEvent(){
+      alert('Double Click Event')
     }
   }
 });
@@ -37,11 +44,12 @@ export default({
 .wrapper div{
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  width: 600px;
   margin: 10px auto;
 }
 
-span{
+span:nth-child(1){
   min-width: 200px;
+  color: red;
 }
 </style>

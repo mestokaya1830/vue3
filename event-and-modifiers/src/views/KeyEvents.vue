@@ -2,47 +2,47 @@
   <div class="wrapper">
     <h2>{{ title }}</h2>
     <div>
-      <span>Keyup Modifier:</span>
+      <span>Keyup Event:</span>
       <input type="text"  @keyup="keyupEvent($event)" placeholder="Keyup something">
     </div>
     <div>
-      <span>Enter Modifier:</span>
+      <span>Enter Event:</span>
       <input type="text" @keyup.enter="enterEvent($event)" placeholder="Enter something">
     </div>
     <div>
-      <span>Tab Modifier:</span>
+      <span>Tab Event:</span>
       <input type="text" @keydown.tab="tabEvent()" placeholder="Tab">
     </div>
     <div>
-      <span>Delete Modifier:</span>
+      <span>Delete Event:</span>
       <input type="text" @keydown.delete="deleteEvent()" placeholder="Delete">
     </div>
     <div>
-      <span>Esc Modifier:</span>
+      <span>Esc Event:</span>
       <input type="text" @keydown.esc="escEvent()" placeholder="Esc">
     </div>
     <div>
-      <span>Space Modifier:</span>
+      <span>Space Event:</span>
       <input type="text" @keydown.space="spaceEvent()" placeholder="Space">
     </div>
     <div>
-      <span>Down Modifier:</span>
+      <span>Down Event:</span>
       <input type="text" @keydown.down="downEvent()" placeholder="Down">
     </div>
     <div>
-      <span>Up Modifier:</span>
+      <span>Up Event:</span>
       <input type="text" @keydown.up="upEvent()" placeholder="Up">
     </div>
     <div>
-      <span>Left Modifier:</span>
+      <span>Left Event:</span>
       <input type="text" @keydown.left="leftEvent()" placeholder="Left">
     </div>
     <div>
-      <span>Right Modifier:</span>
+      <span>Right Event:</span>
       <input type="text" @keydown.right="rightEvent()" placeholder="Right">
     </div>
     <div>
-      <span>Custom Modifier:</span>
+      <span>Custom Event:</span>
       <input type="text" @keydown.a="customEvent()" placeholder="Custom press a">
     </div>
     <div>
@@ -56,10 +56,10 @@
 <script>
 
 export default({
-  name:"KeyModifiers",
+  name:"KeyEvents",
   data() {
     return {
-      title:'Key Modifiers',
+      title:'Key Events',
     }
   },
   methods:{
@@ -114,11 +114,12 @@ export default({
 .wrapper div{
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  width: 600px;
   margin: 10px auto;
 }
 
-span{
+span:nth-child(1){
   min-width: 200px;
+  color: red;
 }
 </style>

@@ -9,24 +9,24 @@ const routes = [
     component: Home,
   },
   {
-    path: "/eventmodifiers",
-    name:'EventModifiers',
-    component: () => import('../views/EventModifiers.vue')
+    path: "/clickevents",
+    name:'ClickEvents',
+    component: () => import('../views/ClickEvents.vue')
   },
   {
-    path: "/keymodifiers",
-    name:'KeyModifiers',
-    component: () => import('../views/KeyModifiers.vue')
+    path: "/keyevents",
+    name:'KeyEvents',
+    component: () => import('../views/KeyEvents.vue')
   },
   {
-    path: "/mousemodifiers",
-    name:'MouseModifiers',
-    component: () => import('../views/MouseModifiers.vue')
+    path: "/mouseevents",
+    name:'MouseEvents',
+    component: () => import('../views/MouseEvents.vue')
   },
   {
-    path: "/inputmodifiers",
-    name:'InputModifiers',
-    component: () => import('../views/InputModifiers.vue')
+    path: "/inputevents",
+    name:'InputEvents',
+    component: () => import('../views/InputEvents.vue')
   },
   {
     path: "/:catchAll(.*)",
