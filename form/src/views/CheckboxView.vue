@@ -3,14 +3,15 @@
     <h2>{{ title }}</h2>
     <form @submit.prevent="sendForm">
       <span>Single value</span>
-      <select name="" id="" v-model="formValues.city">
+      <select v-model="formValues.city">
+        <option disabled>Select City</option>
         <option value="Antep">Antep</option>
         <option value="Urfa">Urfa</option>
         <option value="Amed">Amed</option>
       </select>
 
       <span>Multiple value</span>
-      <select name="" id="" v-model="formValues.language" multiple>
+      <select v-model="formValues.language" multiple>
         <option value="Html">Html</option>
         <option value="Css">Css</option>
         <option value="Javascript">Javascript</option>
@@ -32,7 +33,7 @@ export default {
       title:'Checkbox',
       formValues: {
         language: [],
-        city: ""
+        city: "Select City"
       },
     }
   },

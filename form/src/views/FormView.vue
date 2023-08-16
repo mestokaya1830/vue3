@@ -12,7 +12,7 @@
         <input type="radio" value="Male" v-model="formValues.gender" />
         <input type="radio" value="Female" v-model="formValues.gender" />
       </div>
-      <select name="" id="" v-model="formValues.city">
+      <select v-model="formValues.city">
         <option value="Antep">Antep</option>
         <option value="Urfa">Urfa</option>
         <option value="Amed">Amed</option>
