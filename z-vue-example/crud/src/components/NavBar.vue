@@ -2,6 +2,8 @@
   <div>
     <nav>
       <router-link to="/" class="links">Home</router-link>
+      <router-link to="/users" class="links">Users</router-link>
+
     </nav>
   </div>
 </template>
