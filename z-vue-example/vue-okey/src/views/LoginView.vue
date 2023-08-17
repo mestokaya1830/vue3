@@ -1,16 +1,5 @@
 <template>
   <div class="admin-page">
-    <header class="header">
-      <div class="header-left">
-        <span class="logo"><img src="../assets/img/logo.jpg" width="40px;" height="40px"></span>
-        <h2 class="title">Okey 101 Bedava Çip</h2>
-      </div>
-      <div class="header-right">
-        <nuxt-link to="/" class="header-right" exact-active-class="navbar-active">
-          <h3><i class="fas fa-home fa-lg"/></h3>
-        </nuxt-link>
-      </div>
-    </header>
       <form class="admin-form" @submit.prevent="login">
         <header class="admin-header">
           <h3>Giris Yapiniz</h3>
@@ -55,7 +44,7 @@ export default {
   },
   mounted () {
     if (this.$store.state.auth){
-      this.$router.push('http://localhost:3000/userlist')
+      this.$router.push('http://localhost:3000/users')
     }
   },
   methods: {
@@ -69,7 +58,7 @@ export default {
             this.isBtnLogin = false
             this.alert = 'Giris Basarili...'
             this.isLoader = false
-            this.$router.push('/userlist')
+            this.$router.push('/users')
           } else {
             this.isLoader = false
             this.isBtnLogin = false

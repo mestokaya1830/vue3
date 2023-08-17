@@ -10,7 +10,7 @@ router.post('/login', wrapsync(async(req, res) => {
     const result = await conn.query('SELECT user, pass FROM admin WHERE user = ? LIMIT 1', [req.body.user])
     if (result[0].length > 0) {
       if (result[0][0].pass == req.body.pass) {
-        req.session.auth = result[0][0]
+        // req.session.auth = result[0][0]
         res.json({code: 200, auth: result[0][0]})
       }else{
         res.json({code:400})
@@ -26,23 +26,23 @@ router.get('/logout', wrapsync(async (req, res) => {
   res.json({ ok: true })
 }))
 
-router.get('/userlist', wrapsync(async (req, res) => {   
-  if (req.session.auth) {
-    const conn = await mysql.getConnection()
-    conn.release()
-    const users = await conn.query('SELECT id, email, pass, level FROM users ORDER BY id DESC')
-    res.json({code: 200,  users: users })
-  } 
+router.get('/users', wrapsync(async (req, res) => {   
+  const conn = await mysql.getConnection()
+  conn.release()
+  const users = await conn.query('SELECT id, email, pass, level FROM users ORDER BY id DESC')
+  res.json({code: 200,  users: users })
+  // if (req.session.auth) {
+  // } 
 }))
 
 router.post('/deleteuser', wrapsync(async (req, res) => {   
-  if (req.session.auth) {
-    const conn = await mysql.getConnection()
-    conn.release()
-    await conn.query('DELETE FROM users WHERE id = ?', [req.body.id])
-    const users = await conn.query('SELECT id, email, pass, level FROM users ORDER BY id DESC')
-    res.json({code: 200,  users: users })
-  } 
+  const conn = await mysql.getConnection()
+  conn.release()
+  await conn.query('DELETE FROM users WHERE id = ?', [req.body.id])
+  const users = await conn.query('SELECT id, email, pass, level FROM users ORDER BY id DESC')
+  res.json({code: 200,  users: users })
+  // if (req.session.auth) {
+  // } 
 }))
 
 router.post('/register', wrapsync(async (req, res) => {     

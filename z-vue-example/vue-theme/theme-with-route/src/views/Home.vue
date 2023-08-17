@@ -9,11 +9,8 @@ export default {
   name:'Home',
   data () {
     return {
-      title:'Home Page',
+      title:'Home'
     }
-  },
-  methods:{
-    
   }
 };
 </script>

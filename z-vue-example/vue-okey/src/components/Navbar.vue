@@ -2,12 +2,12 @@
   <div>
     <header class="header">
       <div class="header-left">
-        <span class="logo"><img src="../assets/img/logo.jpg" width="40px;" height="40px"></span>
+        <span class="logo"><img src="../assets/img/logo.jpg" class="logo-img"></span>
         <h2 class="title">Okey 101 Bedava Çip</h2>
       </div>
-      <nuxt-link to="/admin" class="header-right" exact-active-class="navbar-active">
+      <router-link to="/login" class="header-right">
         <h3>Admin</h3>
-      </nuxt-link>
+      </router-link>
     </header>
   </div>
 </template>

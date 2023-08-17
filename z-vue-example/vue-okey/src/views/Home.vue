@@ -2,7 +2,7 @@
   <div class="page">
     <div class="content">
       <section class="content-left">
-        <div><img src="../assets/img/icon0.png"></div>
+        <img src="../assets/img/icon0.png">
       </section>
       <section class="content-right">
         <div class="cr-top">
@@ -11,9 +11,9 @@
           <div class="cr-img"><img src="../assets/img/icon3.jpg"></div>
         </div>
         <div class="navbar cr-bottom">
-          <nuxt-link to="/register" class="navbar-links" exact-active-class="navbar-active">
+          <router-link to="/register" class="navbar-links" exact-active-class="navbar-active">
             Bedava Çip İçin Giriş Yapınız
-          </nuxt-link>
+          </router-link>
         </div>
       </section>
     </div>

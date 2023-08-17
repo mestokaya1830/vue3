@@ -1,5 +1,4 @@
 import { createWebHistory, createRouter } from "vue-router";
-
 import Home from "../views/Home.vue";
 
 const routes = [
@@ -9,24 +8,23 @@ const routes = [
     component: Home,
   },
   {
-    path: "/register",
-    name:'RegisterView',
-    component: () => import('../views/RegisterView.vue')
+    path: "/about",
+    name: "About",
+    component: () => import('../views/About.vue'),
+    meta:{role:'user'}
   },
   {
-    path: "/login",
-    name:'LoginView',
-    component: () => import('../views/LoginView.vue')
-  },
-  {
-    path: "/users",
-    name:'UsersView',
-    component: () => import('../views/UsersView.vue')
+    path: "/contact",
+    name: "Contact",
+    component: () => import('../views/Contact.vue'),
+    meta:{role:'admin'}
   },
   {
     path: "/:catchAll(.*)",
-    name:'NotFound',
-    component: () => import('../views/NotFound.vue')
+    // path: "/:pathname(.*)*",
+    name: "NotFound",
+    component: () => import('../views/NotFound.vue'),//or use redirect
+    // redirect: '/'
   }
 ];
 
@@ -36,5 +34,6 @@ const router = createRouter({
   linkActiveClass: 'active',
   linkExactActiveClass: 'active'
 });
+
 
 export default router;
