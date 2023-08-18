@@ -29,6 +29,11 @@ const routes = [
     component: () => import('../views/InputEvents.vue')
   },
   {
+    path: "/eventmodifiers",
+    name:'EventModifiers',
+    component: () => import('../views/EventModifiers.vue')
+  },
+  {
     path: "/:catchAll(.*)",
     name:'NotFound',
     component: () => import('../views/NotFound.vue')

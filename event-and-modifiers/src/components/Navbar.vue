@@ -5,7 +5,7 @@
       <router-link to="/clickevents" class="links">Click Events</router-link>
       <router-link to="/keyevents" class="links">Key Events</router-link>
       <router-link to="/mouseevents" class="links">Mouse Events</router-link>
-      <router-link to="/inputevents" class="links">Input Events</router-link>
+      <router-link to="/eventmodifiers" class="links">Event Modifiers</router-link>
     </nav>
   </div>
 </template>
