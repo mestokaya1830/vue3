@@ -1,6 +1,14 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "../views/Home.vue";
 
+// import style from './assets/light.css'
+
+const style = () => {
+  const userColor = 'dark'
+  return import(`../assets/${userColor}.css`)
+}
+style()
+
 const routes = [
   {
     path: "/",
@@ -34,6 +42,7 @@ const router = createRouter({
   linkActiveClass: 'active',
   linkExactActiveClass: 'active'
 });
+
 
 
 export default router;
