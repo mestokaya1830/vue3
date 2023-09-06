@@ -6,6 +6,8 @@
     <p>{{ filterUsers }}</p>
     <p>{{ fullName('Mesto', 'Kaya') }}</p>
     <p>Look at the Console and you will see Mixins comes first than Home</p>
+
+    {{ getHores(3) }}
   </div>
 </template>
 

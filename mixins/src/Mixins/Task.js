@@ -28,6 +28,10 @@ export default {
   computed:{
     filterUsers(){
       return this.users.filter(item => item.age < 40)
+    },
+    setHours(param) {
+      const d = new Date()
+      return d.getHors() + param
     }
   }
 }
