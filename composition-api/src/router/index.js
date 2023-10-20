@@ -9,6 +9,11 @@ const routes = [
     component: Home,
   },
   {
+    path: "/counter",
+    name: "Counter",
+    component: () => import('@/views/Counter.vue'),
+  },
+  {
     path: "/:catchAll(.*)",
     name:'NotFound',
     component: () => import('@/views/NotFound.vue')
