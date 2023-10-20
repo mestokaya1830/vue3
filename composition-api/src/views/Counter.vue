@@ -1,3 +1,12 @@
+<script setup>
+  import {ref, onMounted} from 'vue'
+
+  const title = ref('Counter')
+  const counter = ref(0)
+  const increase = () => counter.value++
+  const decrease = () => counter.value--
+</script>
+
 <template>
   <div>
     <h1>{{ title }}</h1>
@@ -9,24 +18,4 @@
   </div>
 </template>
 
-<script>
-import {ref, onMounted} from 'vue'
-export default {
-  setup(){
-    const title = ref('Counter')
-    const counter = ref(0)
-    const increase = () => counter.value++
-    const decrease = () => counter.value--
-    
-    return {
-      title,
-      counter,
-      increase,
-      decrease
-    }
-  }
-}
-</script>
-<style>
-  
-</style>
+<style></style>
