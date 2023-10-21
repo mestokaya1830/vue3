@@ -3,6 +3,7 @@
     <nav>
       <router-link to="/" class="links">Home</router-link>
       <router-link to="/counter" class="links">Counter</router-link>
+      <router-link to="/reactive" class="links">Reactive</router-link>
     </nav>
   </div>
 </template>

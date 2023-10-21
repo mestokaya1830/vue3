@@ -14,6 +14,11 @@ const routes = [
     component: () => import('@/views/Counter.vue'),
   },
   {
+    path: "/reactive",
+    name: "Reactive",
+    component: () => import('@/views/Reactive.vue'),
+  },
+  {
     path: "/:catchAll(.*)",
     name:'NotFound',
     component: () => import('@/views/NotFound.vue')
