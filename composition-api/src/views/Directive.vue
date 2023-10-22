@@ -10,7 +10,7 @@
   import {ref, onMounted} from 'vue'
 
   //global
-  import {vAutofocus} from '../directives/vAutofocus.js'
+  // import {vAutofocus} from '../directives/vAutofocus.js'
   const title = ref('Directive')
   
   //local
