@@ -9,6 +9,11 @@ const routes = [
     component: Home,
   },
   {
+    path: "/hooks",
+    name: "Hooks",
+    component: () => import('@/views/Hooks.vue'),
+  },
+  {
     path: "/counter",
     name: "Counter",
     component: () => import('@/views/Counter.vue'),
