@@ -54,14 +54,9 @@ const routes = [
     component: () => import('@/views/RouteParam.vue'),
   },
   {
-    path: "/teleport",
-    name: "Teleport",
-    component: () => import('@/views/Teleport.vue'),
-  },
-  {
-    path: "/childcomponent",
-    name: "ChildComponent",
-    component: () => import('@/views/ChildComponent.vue'),
+    path: "/component",
+    name: "Component",
+    component: () => import('@/views/Component.vue'),
   },
   {
     path: "/nexttick",
