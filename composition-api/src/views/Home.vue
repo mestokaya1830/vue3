@@ -4,15 +4,10 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import {ref, onMounted} from 'vue'
-export default {
-  setup(){
-    const title = ref('Home')
-    
-    return{
-      title
-    }
-  }
-};
+ const title = ref('Home')
+ onMounted(() => {
+  console.log(title)
+})
 </script>

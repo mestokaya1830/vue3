@@ -11,12 +11,20 @@
 
 <script setup>
 //composition api
-  import {ref, onMounted} from 'vue'
+  import {ref, onMounted, watch} from 'vue'
 
-  const title = ref('Counter')
+  const title = ref('Watch')
+
   const counter = ref(0)
   const increase = () => counter.value++
   const decrease = () => counter.value--
+
+  watch(() => counter.value, (newValue, oldValue) => {
+    if(newValue > 5){//actully you dont need old value
+      alert('New Value is 20')
+    }
+    console.log('Old', oldValue, 'New', newValue)
+  })
 
   onMounted(() => {
     console.log(title)

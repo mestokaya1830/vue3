@@ -1,19 +1,3 @@
-<script setup>
-//composition api
-  import {onMounted, reactive} from 'vue'
-
-  const allData = reactive({
-    title: 'Reactive',
-    counter: 0,
-  })
-  const increase = () => allData.counter++
-  const decrease = () => allData.counter--
-
-  onMounted(() => {
-    console.log(allData)
-  })
-</script>
-
 <template>
   <div>
     <h1>{{ allData.title }}</h1>
@@ -29,3 +13,18 @@
   </select>
   </div>
 </template>
+
+<script setup>
+//composition api
+  import {ref, onMounted, reactive} from 'vue'
+  const allData = reactive({
+    title: ref('Reactive'),
+    counter: 0,
+  })
+  const increase = () => allData.counter++
+  const decrease = () => allData.counter--
+
+  onMounted(() => {
+    console.log(allData.title)
+  })
+</script>

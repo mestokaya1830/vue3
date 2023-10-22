@@ -19,6 +19,16 @@ const routes = [
     component: () => import('@/views/Reactive.vue'),
   },
   {
+    path: "/computed",
+    name: "Computed",
+    component: () => import('@/views/Computed.vue'),
+  },
+  {
+    path: "/watch",
+    name: "Watch",
+    component: () => import('@/views/Watch.vue'),
+  },
+  {
     path: "/:catchAll(.*)",
     name:'NotFound',
     component: () => import('@/views/NotFound.vue')
