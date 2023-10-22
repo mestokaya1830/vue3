@@ -7,6 +7,7 @@
       <router-link to="/reactive" class="links">Reactive</router-link>
       <router-link to="/computed" class="links">Computed</router-link>
       <router-link to="/watch" class="links">Watch</router-link>
+      <router-link to="/directive" class="links">Directive</router-link>
     </nav>
   </div>
 </template>

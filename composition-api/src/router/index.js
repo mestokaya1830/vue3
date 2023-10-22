@@ -34,6 +34,11 @@ const routes = [
     component: () => import('@/views/Watch.vue'),
   },
   {
+    path: "/directive",
+    name: "Directive",
+    component: () => import('@/views/Directive.vue'),
+  },
+  {
     path: "/:catchAll(.*)",
     name:'NotFound',
     component: () => import('@/views/NotFound.vue')
