@@ -16,17 +16,19 @@ export default {
   name:'AppVue',
   data(){
     return{
-      
-    }
-  },
-  provide:{
-    message: 'Hello I am provide',
-    users: [
+      users: [
         {id:1, name:'Mesto'},
         {id:2, name:'Derman'},
         {id:3, name:'Alem'}
       ]
     }
+  },
+  provide(){
+    return {
+      message: 'Hello I am provide',
+      users: this.users
+    }
+  }
 }
 </script>
 <style scoped>
