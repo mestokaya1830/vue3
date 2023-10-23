@@ -24,11 +24,6 @@ const routes = [
     component: () => import('@/views/Fetch.vue'),
   },
   {
-    path: "/counter",
-    name: "Counter",
-    component: () => import('@/views/Counter.vue'),
-  },
-  {
     path: "/reactive",
     name: "Reactive",
     component: () => import('@/views/Reactive.vue'),

@@ -11,7 +11,6 @@
       <router-link to="/watch" class="links">Watch</router-link>
       <router-link to="/directive" class="links">Directive</router-link>
       <router-link to="/routeparam" class="links">Route Param</router-link>
-      <router-link to="/counter" class="links">Counter</router-link>
       <router-link to="/nexttick" class="links">NextTick</router-link>
     </nav>
   </div>
