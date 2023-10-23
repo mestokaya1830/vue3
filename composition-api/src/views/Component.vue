@@ -20,7 +20,6 @@ import EmitComponent from '../components/EmitComponent.vue'
 
  const title = ref('Component')
  const message = ref('Component Props')
-
  const showModel = ref(false)
 
  onMounted(() => {

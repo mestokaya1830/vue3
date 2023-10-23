@@ -59,6 +59,11 @@ const routes = [
     component: () => import('@/views/NextTick.vue'),
   },
   {
+    path: "/providevuex",
+    name: "ProvideVuex",
+    component: () => import('@/views/ProvideVuex.vue'),
+  },
+  {
     path: "/:catchAll(.*)",
     name:'NotFound',
     component: () => import('@/views/NotFound.vue')

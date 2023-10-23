@@ -5,16 +5,14 @@
   </div>
 </template>
 
-<script>
-import Navbar from "./components/Navbar.vue";
-export default{
-  name:'AppPage',
-  components:{Navbar},
-  data() {
-    return{}
-  }
-}
+<script setup>
+  import Navbar from "./components/Navbar.vue";
+  import { provide } from "vue";
+  import store from '@/store'
+  
+  provide('store', store)
 </script>
+
 <style>
 ul {
   display: flex;
