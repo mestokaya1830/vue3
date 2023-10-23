@@ -16,11 +16,16 @@ export default {
   name:'AppVue',
   data(){
     return{
-
+      
     }
   },
   provide:{
-      message:'Set Inject Provide  in App.vue and get from everywhere'
+    message: 'Hello I am provide',
+    users: [
+        {id:1, name:'Mesto'},
+        {id:2, name:'Derman'},
+        {id:3, name:'Alem'}
+      ]
     }
 }
 </script>
