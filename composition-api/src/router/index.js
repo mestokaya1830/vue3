@@ -24,6 +24,11 @@ const routes = [
     component: () => import('@/views/Fetch.vue'),
   },
   {
+    path: "/fetchasync",
+    name: "FetchAsync",
+    component: () => import('@/views/FetchAsync.vue'),
+  },
+  {
     path: "/reactive",
     name: "Reactive",
     component: () => import('@/views/Reactive.vue'),

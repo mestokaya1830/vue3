@@ -5,6 +5,7 @@
       <router-link to="/hooks" class="links">Hooks</router-link>
       <router-link to="/refs" class="links">Refs</router-link>
       <router-link to="/fetch" class="links">Fetch</router-link>
+      <router-link to="/fetchasync" class="links">Fetch Async</router-link>
       <router-link to="/component" class="links">Component</router-link>
       <router-link to="/reactive" class="links">Reactive</router-link>
       <router-link to="/computed" class="links">Computed</router-link>
