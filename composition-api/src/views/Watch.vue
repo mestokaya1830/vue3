@@ -20,8 +20,8 @@
   const decrease = () => counter.value--
 
   watch(() => counter.value, (newValue, oldValue) => {
-    if(newValue > 5){//actully you dont need old value
-      alert('New Value is 20')
+    if(newValue > 5){//actully you dont need the old value
+      alert('New Value is ' + newValue)
     }
     console.log('Old', oldValue, 'New', newValue)
   })

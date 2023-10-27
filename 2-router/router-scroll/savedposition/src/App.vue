@@ -22,17 +22,16 @@
     }
   };
   </script>
-<style scoped>
-*, ::after, ::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+<style>
+  .navbar{
+    position: fixed;
+    top: 0;
   }
-  .navbar{position: fixed;}
   #master-page{
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 1600px;
+    margin-top: 38px;
   }
 </style>

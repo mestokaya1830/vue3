@@ -36,51 +36,17 @@ const router = createRouter({
   linkActiveClass: "active",
   linkExactActiveClass: "active",
 
-  //for all
-  // scrollBehavior(to, from) {
-  //   return {
-  //     top: 0,
-  //     behavior: 'smooth'
-  //   }
-  // },
-
-  //savedposition is running with back button
-  // scrollBehavior(to, from, savedPosition) {
-  //   console.log(savedPosition)
-  //   if(savedPosition){
-  //     return savedPosition
-  //   } else {
-  //     return {
-  //       top: 0,
-  //       behavior: 'smooth'
-  //     }
-  //   }
-  // },
-
-  //route strict
-  // scrollBehavior(to, from) {
-  //   console.log(to, from);
-  //   if(to.name == 'Home'){
-  //     return null
-  //   } else {
-  //     return {
-  //       top: 0,
-  //       behavior: 'smooth'
-  //     }
-  //   }
-  // },
-
-  //to ancher
+  //this refer to image ancher element (to.hash) hash mean = #
   scrollBehavior(to, from, savedPosition) {
     if(savedPosition){
       return savedPosition
     } else if (to.hash) {
       return {
-        top:document.querySelector(to.hash).offsetTop,
+        top:document.querySelector(to.hash).offsetTop - 150,
         behavior: 'smooth'
       }
     }
-  },
+  }
 });
 
 export default router;

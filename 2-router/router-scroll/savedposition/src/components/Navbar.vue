@@ -22,6 +22,8 @@
 <style scoped>
   nav{
     display: flex;
+    background-color: #f1f1f1;
+    width: 100vw;
   }
   .links{
     margin: 10px;
