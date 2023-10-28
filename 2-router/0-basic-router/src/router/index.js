@@ -15,7 +15,7 @@ const routes = [
   {
     path: "/contact",
     name: "Contact",
-    component: () => import('../views/Contact.vue'),
+    component: () => import('../views/Contact.vue')
   },
   {
     path: "/:catchAll(.*)",
@@ -30,7 +30,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   linkActiveClass: 'active',
-  linkExactActiveClass: 'active'
+  linkExactActiveClass: 'active',
 });
 
 export default router;
