@@ -19,6 +19,7 @@ export default {
       users:null
     }
   },
+  
   mounted(){
     this.getUsers()
   },

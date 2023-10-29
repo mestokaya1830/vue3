@@ -27,7 +27,6 @@ export default {
     async getUsers() {
       await axios.get('https://jsonplaceholder.typicode.com/users').then(result => {
         this.users = result.data
-        console.log(result.data)
       })
     }
   }
