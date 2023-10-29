@@ -1,12 +1,12 @@
 <template>
   <div>
     <h2>{{ title }}</h2>
-    <ul>
-      <li v-for="item in users" :key="item.id">
+    <template v-for="item in users" :key="item.id">
+      <li>
         <span>{{ item.id }}</span>
         <span>{{ item.name }}</span>
       </li>
-    </ul>
+    </template>
   </div>
 </template>
 
@@ -34,11 +34,11 @@ export default {
 </script>
 
 <style scoped>
-ul {
+li{
   list-style: none;
 }
 
-ul li span {
+li span {
   margin: 5px 10px;
 }
 </style>
