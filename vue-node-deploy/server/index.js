@@ -15,6 +15,7 @@ app.get('/api', async(req, res) => {
   const users = await Users.find({})
   res.json(users)
 })
+
 app.post('/api/newuser', async(req, res) => {
   const newUser = await new Users(req.body.newuser)
   await newUser.save()
@@ -23,7 +24,7 @@ app.post('/api/newuser', async(req, res) => {
 
 if(process.env.NODE_ENV == 'production'){
   app.use(express.static('public'))
-  app.get('/.*/', (req, res) => res.sendFile(path.resolve(__dirname + 'public/index.html')))
+  app.get('*', (req, res) => res.sendFile(path.resolve('public/index.html')))
 }
 
 app.use((error, req, res, next) => {
