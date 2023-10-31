@@ -2,18 +2,17 @@
   <div>
     <h2>{{ title }}</h2>
 
-    <template v-for="item in users" : key="item_id">
-      <div>
-        <span>{{ item.name }}</span>
-        <span>{{ item.password }}</span>
-      </div>
-    </template>
     <form @submit.prevent="addUser()">
       <input type="text" v-model="newUser.name">
       <input type="text" v-model="newUser.password">
       <input type="submit" value="Add User">
     </form>
-    {{ user }}
+    <template v-for="item in users" :key="item._id">
+      <div class="list">
+        <span>{{ item.name }}</span>
+        <span>{{ item.password }}</span>
+      </div>
+    </template>
   </div>
 </template>
 
@@ -36,11 +35,11 @@ export default {
   methods:{
     async getUsers(){
       const result = await fetch('/api')
-      const final = await result.json()
-      this.users = final
+      this.users = await result.json()
     },
     async addUser(){
-      await fetch('/api/newuser', {
+      console.log(this.newUser)
+      const result = await fetch('/api/newuser', {
         method: 'POST',
         headers: { "Content-type": "application/json; charset=UTF-8" },
         body: JSON.stringify(this.newUser)
@@ -55,8 +54,19 @@ export default {
 form{
   display: flex;
   flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
 }
 form input{
   margin: 10px 0;
+}
+.list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  min-height: 30px;
+  border-bottom: 1px solid #ccc;
 }
 </style>

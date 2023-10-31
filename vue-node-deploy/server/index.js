@@ -1,20 +1,22 @@
-import express from 'express'
+import express from "express";
 const app = express()
-import cors from 'cors'
 import path from 'path'
+import cors from 'cors'
 import dotenv from 'dotenv'
-import db from './model/db.js'
-import Users from './model/usersSchema.js'
+import db from './modules/db.js'
+import Users from './modules/userSchema.js'
 
 dotenv.config()
-app.use(cors())
 app.use(express.json())
+app.use(cors())
+
 
 app.get('/api', async(req, res) => {
   const users = await Users.find({})
   res.json(users)
 })
 app.post('/api/newuser', async(req, res) => {
+  console.log(req.body)
   const newUser = await new Users(req.body)
   await newUser.save()
   res.json('Saved')
@@ -22,11 +24,13 @@ app.post('/api/newuser', async(req, res) => {
 
 if(process.env.NODE_ENV == 'production'){
   app.use(express.static('public'))
-  //handle spa
-  app.get(/.*/, (req, res) => res.sendFile(path.resolve('/public/index.html')))
+  app.get('/.*/', (req, res) => res.sendFile(path.resolve(__dirname + 'public/index.html')))
 }
 
+app.use((error, req, res, next) => {
+  console.log(error)
+})
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log('Server is running...')
 })
