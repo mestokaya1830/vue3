@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name:'Home',
   data () {
@@ -34,17 +35,16 @@ export default {
   },
   methods:{
     async getUsers(){
-      const result = await fetch('/api')
-      this.users = await result.json()
+      const result = await axios.get('/api').then(result => {
+        this.users = result.data
+      })
     },
     async addUser(){
-      console.log(this.newUser)
-      const result = await fetch('/api/newuser', {
-        method: 'POST',
-        headers: { "Content-type": "application/json; charset=UTF-8" },
-        body: JSON.stringify(this.newUser)
+      await axios.post('/api/newuser', {newuser: this.newUser}).then((result) => {
+        if(result.data == 'Saved'){
+          this.getUsers()
+        }
       })
-      this.getUsers()
     }
   }
 };

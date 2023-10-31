@@ -16,8 +16,7 @@ app.get('/api', async(req, res) => {
   res.json(users)
 })
 app.post('/api/newuser', async(req, res) => {
-  console.log(req.body)
-  const newUser = await new Users(req.body)
+  const newUser = await new Users(req.body.newuser)
   await newUser.save()
   res.json('Saved')
 })
