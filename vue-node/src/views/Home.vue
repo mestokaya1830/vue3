@@ -19,7 +19,7 @@ export default {
   },
   methods:{
     async getUser(){
-      const result = await fetch('http://localhost:3000/api')
+      const result = await fetch('/api')
       this.user = await result.json()
     }
   }
