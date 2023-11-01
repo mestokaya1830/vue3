@@ -35,7 +35,7 @@ export default {
   },
   methods:{
     async getUsers(){
-      const result = await axios.get('/api').then(result => {
+      await axios.get('/users').then(result => {
         this.users = result.data
       })
     },
@@ -43,11 +43,13 @@ export default {
       await axios.post('/api/newuser', {newuser: this.newUser}).then((result) => {
         if(result.data == 'Saved'){
           this.getUsers()
+        } else {
+          console.log(result.data)
         }
       })
     }
   }
-};
+}
 </script>
 
 <style>
