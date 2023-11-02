@@ -22,11 +22,15 @@ app.post('/api/newuser', Wrap(async(req, res) => {
   await newUser.save()
   res.json('Saved')
 }))
+app.post('/api/deleteuser', Wrap(async(req, res) => {
+  await Users.deleteOne({_id:req.body.userID})
+  res.json('Deleted')
+}))
 
 //must be after route
 if(process.env.NODE_ENV == 'production'){
-  app.use(express.static('static'))
-  app.get('*', (req, res) => res.sendFile(path.resolve('static/index.html')))
+  app.use(express.static('dist'))
+  app.get('*', (req, res) => res.sendFile(path.resolve('dist/index.html')))
 }
 
 app.listen(process.env.PORT, () => {

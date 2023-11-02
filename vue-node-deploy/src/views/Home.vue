@@ -2,7 +2,7 @@
   <div>
     <h2>{{ title }}</h2>
 
-    <form @submit.prevent="addUser()">
+    <form @submit.prevent="addUser()" ref="form">
       <input type="text" v-model="newUser.name">
       <input type="text" v-model="newUser.password">
       <input type="submit" value="Add User">
@@ -11,6 +11,7 @@
       <div class="list">
         <span>{{ item.name }}</span>
         <span>{{ item.password }}</span>
+        <button @click="deleteUser(item._id)">Delete</button>
       </div>
     </template>
   </div>
@@ -42,6 +43,16 @@ export default {
     async addUser(){
       await axios.post('/api/newuser', {newuser: this.newUser}).then((result) => {
         if(result.data == 'Saved'){
+          this.getUsers()
+          this.newUser = {}
+        } else {
+          console.log(result.data)
+        }
+      })
+    },
+    async deleteUser(userID){
+      await axios.post('/api/deleteuser', {userID: userID}).then((result) => {
+        if(result.data == 'Deleted'){
           this.getUsers()
         } else {
           console.log(result.data)
