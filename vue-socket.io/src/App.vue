@@ -1,6 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-const vFocus = { mounted: (el) => el.data() }
+
 </script>
 
 <template>
@@ -30,7 +29,7 @@ const vFocus = { mounted: (el) => el.data() }
 <script>
 import { socket } from "@/socket"
 export default {
-  name: "Socket",
+  name: "SocketApp",
   data() {
     return {
       user: {
