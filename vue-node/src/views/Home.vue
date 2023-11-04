@@ -1,26 +1,31 @@
 <template>
   <div>
     <h2>{{ title }}</h2>
-    {{ user }}
+    {{ nested }}
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+import { resolveTransitionHooks } from 'vue';
 export default {
   name:'Home',
   data () {
     return {
       title:'Home Page',
-      user: null
+      nested: null
     }
   },
   mounted(){
-    this.getUser()
+    this.getNested()
   },
   methods:{
-    async getUser(){
-      const result = await fetch('/api')
-      this.user = await result.json()
+    async getNested(){
+      await axios.get('/').then(result => {
+        if(result.data){
+          this.nested = result.data.nested
+        }
+      })
     }
   }
 };

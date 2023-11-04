@@ -9,6 +9,21 @@ const routes = [
     component: Home,
   },
   {
+    path: "/creditlogs",
+    name: "CreditLogs",
+    component: () => import('../views/CreditLogs.vue')
+  },
+  {
+    path: "/gamelogs",
+    name: "GameLogs",
+    component: () => import('../views/GameLogs.vue')
+  },
+  {
+    path: "/limitsettings",
+    name: "LimitSettings",
+    component: () => import('../views/LimitSettings.vue')
+  },
+  {
     path: "/:catchAll(.*)",
     component: () => import('../views/NotFound.vue')
   }
