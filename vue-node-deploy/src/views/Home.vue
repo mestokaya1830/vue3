@@ -36,7 +36,7 @@ export default {
   },
   methods:{
     async getUsers(){
-      await axios.get('http://localhost:4000/api/users').then(result => {
+      await axios.get('/api/users').then(result => {
         this.users = result.data
       })
     },
